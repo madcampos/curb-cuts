@@ -1,0 +1,102 @@
+:root {
+	/* Default size for body text */
+	/* INFO: set as a percentage to allow for OS level sizing */
+	--base-font-size: 112.5%;
+
+	/* Header Sizes */
+	--font-ratio: 1.333;
+	--size-h6: calc(1rem * var(--font-ratio));
+	--size-h5: calc(var(--size-h6) * var(--font-ratio));
+	--size-h4: calc(var(--size-h5) * var(--font-ratio));
+	--size-h3: calc(var(--size-h4) * var(--font-ratio));
+	--size-h2: calc(var(--size-h3) * var(--font-ratio));
+	--size-h1: calc(var(--size-h2) * var(--font-ratio));
+
+	/* Size overrides */
+	--size-content-0: 10ch;
+	--size-content-1: 20ch;
+	--size-content-2: 45ch;
+	--size-content-3: 76ch;
+	--size-content-4: 120ch;
+
+	--size-header-0: 5ch;
+	--size-header-1: 15ch;
+	--size-header-2: 30ch;
+	--size-header-3: 45ch;
+	--size-header-4: 96ch;
+
+	/* Theme colors */
+	--magenta-base: #ce00a4;
+	--magenta-0: hsl(from var(--magenta-base) h s 07.6%);
+	--magenta-1: hsl(from var(--magenta-base) h s 15.2%);
+	--magenta-2: hsl(from var(--magenta-base) h s 22.8%);
+	--magenta-3: hsl(from var(--magenta-base) h s 30.4%);
+	--magenta-4: var(--magenta-base);
+	--magenta-5: hsl(from var(--magenta-base) h s 45.6%);
+	--magenta-6: hsl(from var(--magenta-base) h s 53.2%);
+	--magenta-7: hsl(from var(--magenta-base) h s 60.8%);
+	--magenta-8: hsl(from var(--magenta-base) h s 68.4%);
+	--magenta-9: hsl(from var(--magenta-base) h s 76%);
+	--magenta-10: hsl(from var(--magenta-base) h s 83.6%);
+	--magenta-11: hsl(from var(--magenta-base) h s 91.2%);
+	--magenta-12: hsl(from var(--magenta-base) h s 98.8%);
+
+	--cyan-base: #00a4ce;
+	--cyan-0: hsl(from var(--cyan-base) h s 07.6%);
+	--cyan-1: hsl(from var(--cyan-base) h s 15.2%);
+	--cyan-2: hsl(from var(--cyan-base) h s 22.8%);
+	--cyan-3: hsl(from var(--cyan-base) h s 30.4%);
+	--cyan-4: var(--cyan-base);
+	--cyan-5: hsl(from var(--cyan-base) h s 45.6%);
+	--cyan-6: hsl(from var(--cyan-base) h s 53.2%);
+	--cyan-7: hsl(from var(--cyan-base) h s 60.8%);
+	--cyan-8: hsl(from var(--cyan-base) h s 68.4%);
+	--cyan-9: hsl(from var(--cyan-base) h s 76%);
+	--cyan-10: hsl(from var(--cyan-base) h s 83.6%);
+	--cyan-11: hsl(from var(--cyan-base) h s 91.2%);
+	--cyan-12: hsl(from var(--cyan-base) h s 98.8%);
+
+	--lime-base: #c2d245;
+	--lime-0: hsl(from var(--lime-base) h s 07.6%);
+	--lime-1: hsl(from var(--lime-base) h s 15.2%);
+	--lime-2: hsl(from var(--lime-base) h s 22.8%);
+	--lime-3: hsl(from var(--lime-base) h s 30.4%);
+	--lime-4: hsl(from var(--lime-base) h s 38%);
+	--lime-5: hsl(from var(--lime-base) h s 45.6%);
+	--lime-6: hsl(from var(--lime-base) h s 53.2%);
+	--lime-7: var(--lime-base);
+	--lime-8: hsl(from var(--lime-base) h s 68.4%);
+	--lime-9: hsl(from var(--lime-base) h s 76%);
+	--lime-10: hsl(from var(--lime-base) h s 83.6%);
+	--lime-11: hsl(from var(--lime-base) h s 91.2%);
+	--lime-12: hsl(from var(--lime-base) h s 98.8%);
+
+	--yellow-base: #ffe607;
+	--yellow-0: hsl(from var(--yellow-base) h s 07.6%);
+	--yellow-1: hsl(from var(--yellow-base) h s 15.2%);
+	--yellow-2: hsl(from var(--yellow-base) h s 22.8%);
+	--yellow-3: hsl(from var(--yellow-base) h s 30.4%);
+	--yellow-4: hsl(from var(--yellow-base) h s 38%);
+	--yellow-5: hsl(from var(--yellow-base) h s 45.6%);
+	--yellow-6: hsl(from var(--yellow-base) h s 53.2%);
+	--yellow-7: var(--yellow-base);
+	--yellow-8: hsl(from var(--yellow-base) h s 68.4%);
+	--yellow-9: hsl(from var(--yellow-base) h s 76%);
+	--yellow-10: hsl(from var(--yellow-base) h s 83.6%);
+	--yellow-11: hsl(from var(--yellow-base) h s 91.2%);
+	--yellow-12: hsl(from var(--yellow-base) h s 98.8%);
+
+	/* Base colors */
+	--text-1: var(--gray-0);
+	--text-2: var(--gray-4);
+	--surface-1: color-mix(in oklch increasing hue, var(--gray-12) 85%, var(--theme-12));
+	--surface-2: color-mix(in oklch increasing hue, var(--gray-10) 80%, var(--theme-10));
+	--surface-3: color-mix(in oklch increasing hue, var(--gray-8) 80%, var(--theme-8));
+	--surface-4: color-mix(in oklch increasing hue, var(--gray-6) 80%, var(--theme-6));
+
+	/* Link colors */
+	--link-color: ;
+	--link-visited-color: ;
+	--link-hover-color: ;
+	--link-active-color: ;
+}

@@ -1,0 +1,8 @@
+@layer openprops, fonts, vars, base, components, pages, theme, accessible;
+
+@import 'open-props/style' layer(openprops);
+@import url('./fonts.css');
+@import url('./vars.css');
+@import url('./base/index.css');
+@import url('../components/index.css');
+@import url('./accessible.css');
