@@ -1,6 +1,6 @@
 @layer components {
 	workshop-card {
-		--image-size: var(--size-content-1);
+		--image-size: 25ch;
 
 		display: grid;
 		grid-template-columns: 1fr;
@@ -27,7 +27,7 @@
 
 			img {
 				inline-size: 100%;
-				block-size: auto;
+				block-size: 100%;
 				aspect-ratio: 1 / 1;
 				object-fit: cover;
 				object-position: center;
@@ -49,5 +49,8 @@
 				background-color: var(--magenta-2);
 			}
 		}
+
+		@media (max-width: 50rem) { --image-size: 18ch; }
+		@media (max-width: 40rem) { --image-size: 25ch; }
 	}
 }

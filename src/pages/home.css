@@ -175,7 +175,7 @@
 					grid-template-columns: var(--image-size) 1fr;
 					grid-template-rows: auto 1fr;
 					grid-template-areas:
-						'picture heading'
+						'picture header'
 						'picture text';
 					gap: var(--size-3);
 					background-color: var(--surface-2);
@@ -184,7 +184,7 @@
 					padding: var(--size-3);
 
 					h3 {
-						grid-area: heading;
+						grid-area: header;
 						font-size: var(--size-h6);
 						text-align: center;
 						margin: 0;
@@ -204,7 +204,7 @@
 						&:nth-child(even) {
 							grid-template-columns: 1fr var(--image-size);
 							grid-template-areas:
-								'heading picture'
+								'header picture'
 								'text picture';
 
 							img { margin-inline: 0 calc(var(--image-offset) * -1); }
@@ -215,7 +215,7 @@
 						grid-template-columns: 1fr;
 						grid-template-rows: repeat(3, auto);
 						grid-template-areas:
-							'heading'
+							'header'
 							'text'
 							'picture';
 
@@ -261,6 +261,105 @@
 					li { display: contents; }
 				}
 			}
+
+			#mini-workshops {
+				display: grid;
+				grid-template-columns: 3fr 1fr;
+				grid-template-rows: auto 1fr;
+				grid-template-areas:
+					'header header'
+					'content aside';
+				gap: var(--size-3);
+
+				h3 { grid-area: header; }
+				div { grid-area: content; }
+
+				h4 {
+					color: var(--lime-7);
+					text-align: center;
+				}
+
+				aside {
+					grid-area: aside;
+
+					img {
+						inline-size: 100%;
+						block-size: auto;
+					}
+				}
+
+				@media (max-width: 40rem) {
+					grid-template-columns: 1fr;
+					grid-template-rows: repeat(3, auto);
+					grid-template-areas:
+						'header'
+						'content'
+						'aside';
+				}
+			}
+		}
+
+		#newsletter {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 'picture cta';
+			align-items: center;
+			justify-items: center;
+			gap: var(--size-3);
+			padding: 0;
+
+			background-color: var(--magenta-6);
+
+			h2 { font-size: var(--size-h5); }
+
+			hgroup {
+				grid-area: cta;
+				background-color: var(--lime-6);
+				color: var(--text-2);
+				padding: var(--size-3);
+				align-self: stretch;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				text-align: center;
+				gap: var(--size-3);
+
+				* { margin: 0; }
+			}
+
+			img {
+				grid-area: picture;
+				inline-size: 70%;
+				block-size: auto;
+				max-block-size: 70%;
+				object-fit: contain;
+			}
+
+			@media (max-width: 40rem) {
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					'cta'
+					'picture';
+			}
+		}
+
+		#what-does-it-cost {
+			background-color: var(--cyan-6);
+
+			h2 { text-align: center; }
+
+			h3 {
+				color: var(--text-2);
+				font-size: var(--size-h4);
+			}
+		}
+
+		#what-are-community-points {
+			background-color: var(--lime-6);
+			color: var(--text-2);
+
+			h2 { color: var(--text-1); }
 		}
 	}
 }
