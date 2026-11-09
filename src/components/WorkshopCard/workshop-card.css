@@ -45,7 +45,6 @@
 			grid-area: footer;
 
 			a {
-				font-size: inherit;
 				margin-block: 0;
 				background-color: var(--magenta-2);
 			}

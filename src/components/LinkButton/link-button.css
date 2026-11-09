@@ -1,5 +1,5 @@
 @layer components {
-	cta-button {
+	link-button {
 		display: contents;
 
 		a {
@@ -9,7 +9,6 @@
 			inline-size: fit-content;
 
 			color: var(--text-1);
-			font-size: var(--size-h4);
 			text-align: center;
 			text-decoration: none;
 			font-family: var(--font-header);
@@ -19,4 +18,6 @@
 			border-radius: 100vmax;
 		}
 	}
+
+	cta-button a { font-size: var(--size-h4); }
 }
