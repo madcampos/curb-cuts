@@ -8,17 +8,13 @@
 	"short_name": "Curb Cuts Arts",
 	"lang": "en-US",
 	"dir": "ltr",
-	"description": "",
-	"categories": [],
+	"description": "Home of Curb Cuts and Cast-Ons! Making Textile and Fiber Arts Accessible for the Toronto Disability, Deaf/HoH, and Neurodivergent Community.",
+	"categories": ["fiber arts", "crafts", "arts", "knitting", "crochet", "sewing", "yarn", "accessibility", "a11y"],
 	"display": "minimal-ui",
 	"display_override": ["window-controls-overlay"],
 	"orientation": "any",
-	"background_color": "",
-	"theme_color": "",
-	"color_scheme_dark": {
-		"theme_color": "",
-		"background_color": ""
-	},
+	"background_color": "#000000",
+	"theme_color": "#ce00a4",
 	"prefer_related_applications": false,
 	"icons": [
 		{
@@ -120,6 +116,5 @@
 	],
 	"handle_links": "preffered",
 	"launch_handler": { "client_mode": "auto" },
-	"protocol_handlers": [],
 	"edge_side_panel": { "preffer_width": 460 }
 }

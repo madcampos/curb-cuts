@@ -22,4 +22,9 @@
 		font-style: normal;
 		font-display: swap;
 	}
+
+	:root {
+		--font-header: 'Uni Sans', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		--font-text: 'Raleway', sans-serif;
+	}
 }

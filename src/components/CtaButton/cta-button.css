@@ -1,0 +1,22 @@
+@layer components {
+	cta-button {
+		display: contents;
+
+		a {
+			display: block;
+			margin: var(--size-3) auto;
+			padding: var(--size-2) var(--size-4);
+			inline-size: fit-content;
+
+			color: var(--text-1);
+			font-size: var(--size-h4);
+			text-align: center;
+			text-decoration: none;
+			font-family: var(--font-header);
+			text-transform: uppercase;
+
+			background-color: var(--surface-1);
+			border-radius: 100vmax;
+		}
+	}
+}
