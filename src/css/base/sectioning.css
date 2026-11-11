@@ -3,6 +3,7 @@
 		font-family: var(--font-header);
 		font-weight: 900;
 		margin-block: 0.2em;
+		text-align: center;
 	}
 
 	h1 { font-size: var(--size-h1); }

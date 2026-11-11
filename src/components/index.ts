@@ -1,12 +1,12 @@
-// TODO: import components
-import './SvgDefs/SvgDefs.ts';
+import type { FillerText } from './FillerText/filler-text.ts';
+
+import './FillerText/filler-text.ts';
 
 // #region HTML only elements
 declare global {
 	interface HTMLElementTagNameMap {
-		// TODO: add HTML only components
 		'sr-only': HTMLElement;
-		'svg-defs': HTMLElement;
+		'filler-text': FillerText;
 	}
 }
 // #endregion

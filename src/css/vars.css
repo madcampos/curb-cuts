@@ -89,6 +89,8 @@
 	/* Base colors */
 	--text-1: var(--gray-0);
 	--text-2: var(--gray-12);
+	--text-3: var(--magenta-2);
+	--text-4: var(--yellow-6);
 	--surface-1: var(--gray-12);
 	--surface-2: var(--gray-0);
 	--surface-3: var(--gray-8);

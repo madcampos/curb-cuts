@@ -16,7 +16,7 @@
 		inline-size: var(--image-size);
 
 		background-color: var(--surface-2);
-		color: var(--magenta-2);
+		color: var(--text-3);
 		text-align: center;
 
 		picture {
@@ -46,7 +46,7 @@
 
 			a {
 				margin-block: 0;
-				background-color: var(--magenta-2);
+				background-color: var(--text-3);
 			}
 		}
 

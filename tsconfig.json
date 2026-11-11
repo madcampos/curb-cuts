@@ -4,6 +4,7 @@
 	"exclude": ["node_modules/**/*", "dist/**/*"],
 	"compilerOptions": {
 		"rootDir": ".",
+		"lib": ["ESNext", "DOM"],
 		"tsBuildInfoFile": "node_modules/.tsbuildinfo"
 	}
 }

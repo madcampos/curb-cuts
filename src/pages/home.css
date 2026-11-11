@@ -4,24 +4,76 @@
 			background: var(--magenta-6);
 			color: var(--text-0);
 
+			button {
+				border: none;
+				background: transparent;
+				font-size: var(--size-h2);
+				margin: 0;
+				margin-inline-start: auto;
+				display: grid;
+				place-items: center;
+				padding: var(--size-1);
+			}
+
+			dialog {
+				margin: 0;
+				margin-inline-start: auto;
+				block-size: 100dvb;
+				padding: 0;
+				gap: 0;
+
+				header { padding: var(--size-2) var(--size-3); }
+				h2 { font-size: var(--size-h3); }
+
+				ul {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+
+					li {
+						font-size: var(--size-h6);
+						color: var(--text-2);
+						background-color: var(--lime-6);
+
+						a {
+							display: block;
+							color: inherit;
+							padding: var(--size-2) var(--size-3);
+							text-decoration: none;
+						}
+
+						ul li {
+							padding-inline-start: var(--size-7);
+							color: var(--text-1);
+							background-color: var(--surface-1);
+						}
+					}
+				}
+			}
+
 			hgroup {
 				display: grid;
 
-				grid-template-columns: 2fr 1fr;
-				align-items: center;
-				padding: var(--size-3) var(--size-7);
+				grid-template-columns: auto 2fr 1fr;
+				align-items: start;
+				padding: var(--size-7);
 				max-inline-size: var(--size-content-4);
-				gap: var(--size-5);
+				gap: var(--size-3);
 				margin-inline: auto;
 
 				h1 {
-					color: var(--yellow-6);
+					color: var(--text-4);
 					margin: 0;
+					line-height: 1;
 
 					@media (max-width: 30rem) { font-size: var(--size-h2); }
 				}
 
-				@media (max-width: 30rem) { grid-template-columns: 1fr; }
+				@media (max-width: 30rem) {
+					grid-template-columns: 1fr;
+					justify-items: center;
+					text-align: center;
+				}
 			}
 
 			hero-images {
@@ -63,8 +115,17 @@
 			gap: var(--size-3);
 			align-items: center;
 
-			h2 { grid-area: header; }
-			p { grid-area: text; }
+			h2 {
+				grid-area: header;
+				align-self: end;
+				margin: 0;
+			}
+
+			p {
+				grid-area: text;
+				align-self: start;
+				margin: 0;
+			}
 
 			figure {
 				grid-area: picture;
@@ -72,8 +133,10 @@
 				flex-direction: column;
 				gap: var(--size-2);
 
-				background-color: var(--surface-2);
-				padding: var(--size-2);
+				img, figcaption {
+					background-color: var(--surface-2);
+					padding: var(--size-2);
+				}
 
 				img {
 					inline-size: 100%;
@@ -101,37 +164,64 @@
 			background-color: var(--lime-6);
 			color: var(--text-2);
 
-			h2 { text-align: center; }
+			dl {
+				margin: 0;
+				padding: 0;
 
-			section {
-				--image-size: var(--size-content-2);
+				& > div {
+					--image-size: var(--size-content-2);
 
-				display: grid;
-				grid-template-columns: 1fr var(--image-size);
-				gap: var(--size-7);
-				margin-block: var(--size-4);
+					display: grid;
+					grid-template-columns: 1fr var(--image-size);
+					grid-template-rows: auto auto;
+					grid-template-areas:
+						'title picture'
+						'text picture';
+					gap: var(--size-7);
+					margin-block: var(--size-4);
 
-				img {
-					inline-size: 100%;
-					block-size: auto;
-					align-self: center;
-					background-color: var(--surface-1);
-					object-fit: cover;
-					object-position: center;
-				}
-
-				h3 { margin: 0; }
-
-				@media (min-width: 30.001rem) {
-					&:nth-of-type(even) {
-						grid-template-columns: var(--image-size) 1fr;
-
-						img { order: -1; }
+					dt {
+						grid-area: title;
+						font-family: var(--font-header);
+						font-size: var(--size-h6);
 					}
-				}
 
-				@media (max-width: 30rem) { grid-template-columns: 1fr; }
-				@media (max-width: 50rem) { --image-size: var(--size-content-1); }
+					dd {
+						display: contents;
+
+						div { grid-area: text; }
+
+						img {
+							grid-area: picture;
+							inline-size: 100%;
+							block-size: auto;
+							align-self: center;
+							background-color: var(--surface-1);
+							object-fit: cover;
+							object-position: center;
+						}
+					}
+
+					@media (min-width: 30.001rem) {
+						&:nth-of-type(even) {
+							grid-template-columns: var(--image-size) 1fr;
+							grid-template-areas:
+								'picture title'
+								'picture text';
+						}
+					}
+
+					@media (max-width: 30rem) {
+						grid-template-columns: 1fr;
+						grid-template-rows: repeat(3, auto);
+						grid-template-areas:
+							'title'
+							'picture'
+							'text';
+					}
+
+					@media (max-width: 50rem) { --image-size: var(--size-content-1); }
+				}
 			}
 		}
 
@@ -149,7 +239,7 @@
 
 			h2 {
 				grid-area: header;
-				color: var(--yellow-6);
+				color: var(--text-4);
 				align-self: end;
 				margin: 0;
 			}
@@ -161,13 +251,13 @@
 				align-self: start;
 			}
 
-			ul {
+			dl {
 				grid-area: list;
 				list-style: none;
 				margin: 0;
 				padding: 0;
 
-				li {
+				& > div {
 					--image-size: 5rem;
 					--image-offset: var(--size-7);
 
@@ -183,12 +273,15 @@
 					margin: var(--size-3);
 					padding: var(--size-3);
 
-					h3 {
+					dt {
 						grid-area: header;
 						font-size: var(--size-h6);
+						font-family: var(--font-header);
 						text-align: center;
 						margin: 0;
 					}
+
+					dd { display: contents; }
 
 					img {
 						grid-area: picture;
@@ -241,13 +334,9 @@
 				background-color: var(--surface-1);
 				padding: var(--size-3) var(--size-7);
 				margin: 0 calc(var(--size-7) * -1);
-				text-align: center;
 			}
 
-			h3 {
-				color: var(--yellow-6);
-				text-align: center;
-			}
+			h3 { color: var(--text-4); }
 
 			#four-hour-workshops {
 				ul {
@@ -274,10 +363,7 @@
 				h3 { grid-area: header; }
 				div { grid-area: content; }
 
-				h4 {
-					color: var(--lime-7);
-					text-align: center;
-				}
+				h4 { color: var(--text-4); }
 
 				aside {
 					grid-area: aside;
@@ -346,13 +432,10 @@
 
 		#what-does-it-cost {
 			background-color: var(--cyan-6);
+			color: var(--text-2);
 
-			h2 { text-align: center; }
-
-			h3 {
-				color: var(--text-2);
-				font-size: var(--size-h4);
-			}
+			h2 { color: var(--text-1); }
+			h3 { font-size: var(--size-h4); }
 		}
 
 		#what-are-community-points {
@@ -361,5 +444,108 @@
 
 			h2 { color: var(--text-1); }
 		}
+
+		#community-open-studio {
+			dl {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				inline-size: calc(100% + var(--size-7) * 2);
+				margin-inline: calc(var(--size-7) * -1);
+
+				& > div {
+					display: flex;
+					flex-direction: column;
+					gap: var(--size-3);
+					background-color: var(--cyan-6);
+					padding: var(--size-3);
+					color: var(--text-3);
+
+					dt {
+						font-family: var(--font-header);
+						font-size: var(--size-h6);
+					}
+
+					dd {
+						margin: 0;
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						gap: var(--size-3);
+						align-items: center;
+
+						p { margin: 0; }
+
+						img {
+							inline-size: 100%;
+							max-inline-size: var(--size-content-1);
+							block-size: auto;
+							aspect-ratio: 1 / 1;
+							object-fit: cover;
+							object-position: center;
+						}
+					}
+
+					&:nth-child(2n) { background-color: var(--lime-6); }
+					&:nth-child(3n) { background-color: var(--surface-2); }
+
+					&:nth-child(4n) {
+						background-color: var(--magenta-6);
+						color: var(--text-1);
+					}
+
+					&:nth-child(even) {
+						dt { text-align: end; }
+						img { order: 2; }
+					}
+				}
+			}
+		}
+
+		#tickets-and-registration {
+			background-color: var(--cyan-6);
+			color: var(--text-2);
+		}
+
+		#about-the-lead-artist {
+			background-color: var(--magenta-6);
+
+			img {
+				inline-size: 100%;
+				block-size: auto;
+				aspect-ratio: 1 / 1;
+				object-fit: contain;
+				object-position: center;
+			}
+		}
+
+		#gofundme {
+			background-color: var(--cyan-6);
+			color: var(--text-2);
+
+			hgroup {
+				background-color: var(--surface-1);
+				color: var(--text-1);
+				text-align: center;
+				padding: var(--size-3);
+				margin-block-start: calc(var(--size-3) * -1);
+				margin-inline: calc(var(--size-7) * -1);
+
+				p {
+					font-size: var(--size-h6);
+					font-family: var(--font-header);
+				}
+			}
+
+			img {
+				inline-size: 100%;
+				block-size: auto;
+				aspect-ratio: 1 / 1;
+				object-fit: contain;
+				object-position: center;
+			}
+
+			link-button a { font-size: var(--size-h4); }
+		}
+
+		#contact { background-color: var(--magenta-6); }
 	}
 }

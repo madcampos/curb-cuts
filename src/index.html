@@ -83,8 +83,79 @@
 	</head>
 
 	<body>
+		<skip-to-content>
+			<a href="#content">Skip to Content</a>
+		</skip-to-content>
+
 		<header>
+			<button
+				type="button"
+				popovertarget="menu"
+				popovertargetaction="show"
+			>
+				<sr-only>Open menu</sr-only>
+
+				<svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:menu">
+					<path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+				</svg>
+			</button>
+			<dialog
+				id="menu"
+				popover
+			>
+				<header>
+					<h2>Menu</h2>
+					<button
+						type="button"
+						popovertarget="menu"
+						popovertargetaction="hide"
+					>
+						<sr-only>Close menu</sr-only>
+						<svg width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:close">
+							<path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+						</svg>
+					</button>
+				</header>
+
+				<dialog-content>
+					<nav>
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#curb-cuts-and-cast-ons">Curb Cuts and Cast-Ons</a></li>
+							<li><a href="#accessibility">Accessibility</a></li>
+							<li>
+								<a href="#what-we-do">What We Do</a>
+								<ul>
+									<li><a href="#workshops">Winter 2026-2027 Workshops</a></li>
+									<li><a href="#what-does-it-cost">What does It Cost?</a></li>
+									<li><a href="#what-are-community-points">What are Community Points?</a></li>
+									<li><a href="#community-open-studio">Community Open Studio</a></li>
+									<li><a href="#tickets-and-registration">How do I get Tickets for Community Open Studio?</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#about-the-lead-artist">About the Lead Artist</a>
+								<ul>
+									<li><a href="#curb-cuts-studio">Curb Cuts Studio</a></li>
+									<li><a href="#gofundme">GoFundMe</a></li>
+								</ul>
+							</li>
+							<li><a href="#contact">Let's Connect</a></li>
+							<li><a href="#instagram">Instagram Feed</a></li>
+						</ul>
+					</nav>
+				</dialog-content>
+			</dialog>
+
 			<hgroup>
+				<img
+					src="./images/logo.svg"
+					alt=""
+					loading="eager"
+					width="100"
+					height="100"
+				/>
+
 				<h1>Curb Cuts Arts</h1>
 
 				<p>
@@ -139,104 +210,164 @@
 				/>
 			</hero-images>
 		</header>
-		<main>
+		<main id="content">
 			<section id="curb-cuts-and-cast-ons">
 				<h2>Curb Cuts and Cast-Ons</h2>
 
 				<p>
-					<!-- TODO: copy text -->
-					Cat ipsum dolor sit amet, shred all toilet paper and spread around the house and weigh eight pounds but take up a full-size bed, stare out cat door then go back
-					inside.
+					<filler-text length="40"></filler-text>
 				</p>
 
 				<figure>
-					<img
-						src="./images/granny-squares.webp"
-						alt="Some crochet granny squares laid out on a table, with yarn balls on top fo them. The yarn is all in saturated yellow, red, light blue, and dark blue colours."
-						loading="lazy"
-						decoding="async"
-						width="720"
-						height="478"
-					/>
-
 					<figcaption>
 						<q>Design should spark joy, solve problems, and feel like you.</q>
 					</figcaption>
+
+					<img
+						src="./images/funded-by-tac.svg"
+						alt="Text reading: Funded by the city of Toronto. Below it the Toronto Arts Council logo."
+						loading="lazy"
+						decoding="async"
+						width="500"
+						height="200"
+					/>
+
+					<img
+						src="./images/wheelchair-pouch.webp"
+						alt="A picture of the front of a wheelchair, showcaising a hand woven pouch."
+						loading="lazy"
+						decoding="async"
+						width="384"
+						height="512"
+					/>
+					<!--
+						<img
+							src="./images/granny-squares.webp"
+							alt="Some crochet granny squares laid out on a table, with yarn balls on top fo them. The yarn is all in saturated yellow, red, light blue, and dark blue colours."
+							loading="lazy"
+							decoding="async"
+							width="720"
+							height="478"
+						/>
+					-->
 				</figure>
 			</section>
 
 			<section id="accessibility">
 				<h2>Accessibility</h2>
 
-				<section>
+				<dl>
 					<div>
-						<h3>
+						<dt>
 							Whimble Event Attendants Will be at All Events
-						</h3>
-						<p>
-							<!-- TODO: copy text -->
-							Cat ipsum dolor sit amet, grass smells good eat too much then proceed to regurgitate all over living room carpet while humans eat dinner so intently
-							stare at the same spot. Lies down if human is on laptop sit on the keyboard dismember a mouse and then regurgitate parts of it on the family room floor
-							poop on couch sit and stare yet sweet beast, and
-						</p>
+						</dt>
+						<dd>
+							<div>
+								<p>
+									<filler-text length="80"></filler-text>
+								</p>
+							</div>
+
+							<img
+								src="./images/whimble-logo.webp"
+								alt="Whimble Logo"
+								loading="lazy"
+								decoding="async"
+								width="604"
+								height="381"
+							/>
+						</dd>
 					</div>
 
-					<img
-						src="./images/whimble-logo.webp"
-						alt="Whimble Logo"
-						loading="lazy"
-						decoding="async"
-						width="604"
-						height="381"
-					/>
-				</section>
-
-				<section>
 					<div>
-						<h3>
+						<dt>
 							ASL Interpreters at Some Events, and the Lead Artist Liz, is Relearning ASL
-						</h3>
-						<p>
-							<!-- TODO: copy text -->
-							Cat ipsum dolor sit amet, grass smells good eat too much then proceed to regurgitate all over living room carpet while humans eat dinner so intently
-							stare at the same spot. Lies down if human is on laptop sit on the keyboard dismember a mouse and then regurgitate parts of it on the family room floor
-							poop on couch sit and stare yet sweet beast, and
-						</p>
+						</dt>
+						<dd>
+							<div>
+								<p>
+									<filler-text length="80"></filler-text>
+								</p>
+							</div>
+
+							<img
+								src="./images/asl.webp"
+								alt="A man doing a sign in ASL."
+								loading="lazy"
+								decoding="async"
+								width="764"
+								height="512"
+							/>
+						</dd>
 					</div>
 
-					<img
-						src="./images/asl.webp"
-						alt="A man doing a sign in ASL."
-						loading="lazy"
-						decoding="async"
-						width="764"
-						height="512"
-					/>
-				</section>
-
-				<section>
 					<div>
-						<h3>
+						<dt>
 							Therapy Dogs
-						</h3>
-						<p>
-							<!-- TODO: copy text -->
-							Cat ipsum dolor sit amet, grass smells good eat too much then proceed to regurgitate all over living room carpet while humans eat dinner so intently
-							stare at the same spot. Lies down if human is on laptop sit on the keyboard dismember a mouse and then regurgitate parts of it on the family room floor
-							poop on couch sit and stare yet sweet beast, and
-						</p>
+						</dt>
+						<dd>
+							<div>
+								<p>
+									<filler-text length="80"></filler-text>
+								</p>
+							</div>
+
+							<img
+								src="./images/therapy-dog.webp"
+								alt="A photo of a golden retriever looking at the camera with a happy face."
+								loading="lazy"
+								decoding="async"
+								width="679"
+								height="512"
+							/>
+						</dd>
 					</div>
 
-					<img
-						src="./images/therapy-dog.webp"
-						alt="A photo of a golden retriever looking at the camera with a happy face."
-						loading="lazy"
-						decoding="async"
-						width="679"
-						height="512"
-					/>
-				</section>
+					<div>
+						<dt>
+							Blind and Low Vision Friendly. Lead Artist’s Mom is Blind
+						</dt>
+						<dd>
+							<div>
+								<p>
+									<filler-text length="80"></filler-text>
+								</p>
+							</div>
 
+							<!-- TODO: image -->
+							<img
+								src="./images/asl.webp"
+								alt="A man doing a sign in ASL."
+								loading="lazy"
+								decoding="async"
+								width="764"
+								height="512"
+							/>
+						</dd>
+					</div>
+
+					<div>
+						<dt>
+							Service Dog and Guide Dog Friendly Graasy and concrete releif areas. Comfy sanitized floor mats and water bowls.
+						</dt>
+						<dd>
+							<div>
+								<p>
+									<filler-text length="80"></filler-text>
+								</p>
+							</div>
+
+							<img
+								src="./images/service-dog.webp"
+								alt="A white dog with a harness reading &quot;Service Dog&quot;"
+								loading="lazy"
+								decoding="async"
+								width="771"
+								height="512"
+							/>
+						</dd>
+					</div>
+				</dl>
 				<cta-button>
 					<link-button>
 						<a href="#">Download the Access Plan</a>
@@ -256,62 +387,68 @@
 					height="341"
 				/>
 
-				<ul>
-					<li>
-						<h3>Workshops</h3>
+				<dl>
+					<div>
+						<dt>Workshops</dt>
 
-						<img
-							src="./images/what-we-do/what-we-do-1.webp"
-							alt="Two spools of thread and a measuring tape"
-							loading="lazy"
-							decoding="async"
-							width="256"
-							height="192"
-							aria-hidden="true"
-						/>
+						<dd>
+							<img
+								src="./images/what-we-do/what-we-do-1.webp"
+								alt="Two spools of thread and a measuring tape"
+								loading="lazy"
+								decoding="async"
+								width="256"
+								height="192"
+								aria-hidden="true"
+							/>
 
-						<div>
-							<p>Learn to craft with fabric and yarn with tools and equipment that's chosen for accessibility and fun for just a nominal materials fee.</p>
-							<p>You can pay with your community points.</p>
-						</div>
-					</li>
+							<div>
+								<p>Learn to craft with fabric and yarn with tools and equipment that's chosen for accessibility and fun for just a nominal materials fee.</p>
+								<p>You can pay with your community points.</p>
+							</div>
+						</dd>
+					</div>
 
-					<li>
-						<h3>Community Open Studio</h3>
+					<div>
+						<dt>Community Open Studio</dt>
 
-						<img
-							src="./images/what-we-do/what-we-do-2.webp"
-							alt="A loom."
-							loading="lazy"
-							decoding="async"
-							width="256"
-							height="192"
-							aria-hidden="true"
-						/>
+						<dd>
+							<img
+								src="./images/what-we-do/what-we-do-2.webp"
+								alt="A loom."
+								loading="lazy"
+								decoding="async"
+								width="256"
+								height="192"
+								aria-hidden="true"
+							/>
 
-						<div>
-							<p>Scroll-stopping graphics that keep your audience hooked.</p>
-						</div>
-					</li>
+							<div>
+								<p>Scroll-stopping graphics that keep your audience hooked.</p>
+							</div>
+						</dd>
+					</div>
 
-					<li>
-						<h3>Accessible Popup Shop</h3>
+					<div>
+						<dt>Accessible Popup Shop</dt>
 
-						<img
-							src="./images/what-we-do/what-we-do-3.webp"
-							alt="A woman holding balls of yarn."
-							loading="lazy"
-							decoding="async"
-							width="256"
-							height="192"
-							aria-hidden="true"
-						/>
+						<dd>
+							<img
+								src="./images/what-we-do/what-we-do-3.webp"
+								alt="A woman holding balls of yarn."
+								loading="lazy"
+								decoding="async"
+								width="256"
+								height="192"
+								aria-hidden="true"
+							/>
 
-						<div>
-							<p>Clean, modern page designs that make browsing a breeze.</p>
-						</div>
-					</li>
-				</ul>
+							<div>
+								<p>Clean, modern page designs that make browsing a breeze.</p>
+							</div>
+						</dd>
+					</div>
+				</dl>
 			</section>
 
 			<section id="workshops">
@@ -493,6 +630,19 @@
 			<section id="what-does-it-cost">
 				<h2>What Does It Cost?</h2>
 
+				<columns-section text-columns>
+					<p>
+						In short, yes. However, community members can use their community points to cover either 50% of the fee, or in for ODSP recipiants 100% of their materials
+						fee.
+					</p>
+					<p>
+						There’s a nominal materials fee to register in both 4-hour workshops and mini-workshops. This helps ensure people who register show up, and offsets some
+						of the cost of your yarn and/or fabric.
+					</p>
+				</columns-section>
+
+				<p><em>It also helps with further grant applications, as funders look for matching funding.</em></p>
+
 				<h3>Workshops and Mini-Workshops</h3>
 
 				<ul>
@@ -523,7 +673,7 @@
 				<h2>What are Community Points?</h2>
 
 				<p>
-					<!-- TODO: copy text -->
+					<filler-text length="100"></filler-text>
 				</p>
 
 				<h3>Examples</h3>
@@ -535,7 +685,7 @@
 					<li>You can purchase a skein after the event, or save up their points for that special something.</li>
 				</ul>
 
-				<p>To learn more about community points read this post on Curb Cuts Arts’ Substack.</p>
+				<p>To learn more about community points read this post on Curb Cuts Arts’ Substack or by <a href="#">downloading the accessible PDF</a>.</p>
 			</section>
 
 			<section id="community-open-studio">
@@ -546,65 +696,80 @@
 					to help build our community and earn community point.
 				</p>
 
-				<open-studio-card>
-					<h3>Access Expensive Equipment</h3>
+				<p>
+					Everything is at wheelchair user height. Braille labels will be on many items. No displays blocking your wheelchair, scooter, or rollator. One drink ticket and
+					snack ticket included with admission.
+				</p>
 
-					<img
-						src=""
-						alt=""
-						loading="lazy"
-						decoding="async"
-						width="512"
-						height="512"
-					/>
+				<dl>
+					<div>
+						<dt>Access Expensive Equipment</dt>
+						<dd>
+							<img
+								src="./images/studio/studio-1.webp"
+								alt=""
+								loading="lazy"
+								decoding="async"
+								width="512"
+								height="512"
+							/>
 
-					<p>Continue learning and creating after your workshops with having to buy costly equipment or find the space for it.</p>
-				</open-studio-card>
+							<p>Continue learning and creating after your workshops with having to buy costly equipment or find the space for it.</p>
+						</dd>
+					</div>
 
-				<open-studio-card>
-					<h3>Shop in the Accessible Popup Shop</h3>
+					<div>
+						<dt>Shop in the Accessible Popup Shop</dt>
+						<dd>
+							<img
+								src="./images/studio/studio-2.webp"
+								alt=""
+								loading="lazy"
+								decoding="async"
+								width="764"
+								height="512"
+							/>
 
-					<img
-						src=""
-						alt=""
-						loading="lazy"
-						decoding="async"
-						width="512"
-						height="512"
-					/>
+							<p>Shop with either your community points or your debit/credit card and a percentage goes towards supporting the Curb Cuts Arts programs.</p>
+						</dd>
+					</div>
 
-					<p>Shop with either your community points or your debi/credit card and a percentage goes towards supporting the Curb Cuts Arts programs.</p>
-				</open-studio-card>
+					<div>
+						<dt>Volunteer and Earn Community Points</dt>
+						<dd>
+							<img
+								src="./images/studio/studio-3.webp"
+								alt=""
+								loading="lazy"
+								decoding="async"
+								width="771"
+								height="512"
+							/>
 
-				<open-studio-card>
-					<h3>Access Expensive Equipment</h3>
+							<p>Continue learning and creating after your workshops with having to buy costly equipment or find the space for it.</p>
+						</dd>
+					</div>
 
-					<img
-						src=""
-						alt=""
-						loading="lazy"
-						decoding="async"
-						width="512"
-						height="512"
-					/>
+					<div>
+						<dt>Shop in the Accessible Popup Shop</dt>
+						<dd>
+							<img
+								src="./images/studio/studio-4.webp"
+								alt=""
+								loading="lazy"
+								decoding="async"
+								width="771"
+								height="512"
+							/>
 
-					<p>Continue learning and creating after your workshops with having to buy costly equipment or find the space for it.</p>
-				</open-studio-card>
-
-				<open-studio-card>
-					<h3>Shop in the Accessible Popup Shop</h3>
-
-					<img
-						src=""
-						alt=""
-						loading="lazy"
-						decoding="async"
-						width="512"
-						height="512"
-					/>
-
-					<p>Shop with either your community points or your debi/credit card and a percentage goes towards supporting the Curb Cuts Arts programs.</p>
-				</open-studio-card>
+							<p>
+								Shop with either your community points or your debit/credit card and a percentage goes towards supporting the Curb Cuts Arts programs.
+								<br />
+								There’s no HST in the pop up shop!
+							</p>
+						</dd>
+					</div>
+				</dl>
 
 				<p>
 					<strong>Visit <a href="#">Eventbrite</a> for dates and registration</strong>
@@ -613,20 +778,178 @@
 				</p>
 			</section>
 
+			<section id="tickets-and-registration">
+				<h2>How do I get Tickets for Community Open Studio?</h2>
+
+				<p>
+					Visit Eventbrite for dates, and to register Follow us on Instagram and/or subscribe (free) to our Substack newsletter to be the first to know about upcoming
+					events.
+				</p>
+
+				<ul>
+					<li>$6.00 ticket</li>
+					<li>ODSP Receipants ($3.00)</li>
+					<li>Can use community points</li>
+				</ul>
+
+				<p><strong>NOTE</strong>: Materials fees are less than the actual materials cost.</p>
+			</section>
+
 			<section id="about-the-lead-artist">
 				<h2>About the Lead Artist</h2>
 
-				<!-- TODO -->
+				<columns-section>
+					<img
+						src="./images/about/about-1.webp"
+						alt="A photo of green grassy hills overlooking a deep torquise and calm sea, with a few sheep in the hills."
+						loading="lazy"
+						width="769"
+						height="512"
+					/>
+
+					<div>
+						<p>
+							<filler-text length="80"></filler-text>
+						</p>
+						<p>
+							<filler-text length="80"></filler-text>
+						</p>
+					</div>
+				</columns-section>
+
+				<columns-section>
+					<img
+						src="./images/about/about-2.webp"
+						alt="An old sewing machine."
+						loading="lazy"
+						width="512"
+						height="683"
+					/>
+
+					<div>
+						<p>
+							<filler-text length="80"></filler-text>
+						</p>
+						<p>
+							<filler-text length="80"></filler-text>
+						</p>
+					</div>
+				</columns-section>
+
+				<columns-section>
+					<img
+						src="./images/about/about-3.webp"
+						alt="A small hand knitted pouch with a bow made out of yarn on top of it."
+						loading="lazy"
+						width="383"
+						height="512"
+					/>
+
+					<div>
+						<p>Fun facts!</p>
+						<ul>
+							<li>
+								<filler-text length="6"></filler-text>
+							</li>
+							<li>
+								<filler-text length="6"></filler-text>
+							</li>
+							<li>
+								<filler-text length="6"></filler-text>
+							</li>
+							<li>
+								<filler-text length="6"></filler-text>
+							</li>
+							<li>
+								<filler-text length="6"></filler-text>
+							</li>
+						</ul>
+					</div>
+				</columns-section>
 			</section>
 
-			<section id="gofund-me">
-				<h2>Gofund Me</h2>
+			<section id="gofundme">
+				<hgroup>
+					<h2>GoFundMe</h2>
 
-				<!-- TODO -->
+					<p>You can help make textile and fiber arts more accessible!</p>
+				</hgroup>
+
+				<h3>$12,500</h3>
+				<ul>
+					<li>Class set of 6 wheelchair accessible Singer smart sewing and embroidery machines, and</li>
+					<li>Four LK 150 knitting machines with intarsia carriages for colourwork.</li>
+					<li>Six e-spinners, modern day table top electic spinning wheels that are accessible for wheelchair users</li>
+				</ul>
+
+				<columns-section>
+					<div>
+						<p>
+							<filler-text length="20"></filler-text>
+						</p>
+						<p>
+							<filler-text length="40"></filler-text>
+						</p>
+					</div>
+					<img
+						src=""
+						alt=""
+						loading="lazy"
+						width="512"
+						height="512"
+					/>
+				</columns-section>
+
+				<columns-section>
+					<div>
+						<p>
+							<filler-text length="20"></filler-text>
+						</p>
+						<p>
+							<filler-text length="40"></filler-text>
+						</p>
+					</div>
+					<img
+						src=""
+						alt=""
+						loading="lazy"
+						width="512"
+						height="512"
+					/>
+				</columns-section>
+
+				<columns-section>
+					<div>
+						<p>
+							<filler-text length="20"></filler-text>
+						</p>
+						<p>
+							<filler-text length="40"></filler-text>
+						</p>
+					</div>
+					<img
+						src=""
+						alt=""
+						loading="lazy"
+						width="512"
+						height="512"
+					/>
+				</columns-section>
+
+				<link-button>
+					<!-- TODO: CTA -->
+					<a href="">Call to Action</a>
+				</link-button>
 			</section>
 
-			<section id="lets-connect">
-				<h2>Let's Connect!</h2>
+			<section id="contact">
+				<hgroup>
+					<h2>Let's Connect!</h2>
+
+					<link-button>
+						<a href="#">Test</a>
+					</link-button>
+				</hgroup>
 
 				<div>
 					<address>
@@ -637,26 +960,64 @@
 
 						<p>
 							<strong>Socials:</strong>
-							<span></span>
+							<span>@CurbCutsArts</span>
 						</p>
 
 						<p>
 							<strong>Substack:</strong>
-							<a href=""></a>
+							<a href="https://curbcutsarts.substack.com/">https://curbcutsarts.substack.com/</a>
 						</p>
 
 						<p>
 							<strong>Eventbrite:</strong>
-							<a href=""></a>
+							<a href="https://curbcutsarts.eventbrite.ca/">https://curbcutsarts.eventbrite.ca/</a>
 						</p>
 					</address>
 
 					<p>
-						<!-- TODO: code of conduct and LGBT space copy -->
+						<strong>
+							<filler-text length="10"></filler-text>
+						</strong>
 					</p>
 				</div>
 
-				<form action="#" method="post"></form>
+				<form action="#" method="post">
+					<input-wrapper>
+						<label for="contact-name">Name</label>
+						<input
+							id="contact-name"
+							name="name"
+							type="text"
+							required
+							minlength="1"
+						/>
+					</input-wrapper>
+
+					<input-wrapper>
+						<label for="contact-email">Email</label>
+						<input
+							id="contact-email"
+							name="email"
+							type="email"
+							required
+						/>
+					</input-wrapper>
+
+					<input-wrapper>
+						<label for="contact-message">Message</label>
+						<textarea
+							id="contact-message"
+							name="message"
+							cols="20"
+							rows="10"
+							required
+						></textarea>
+					</input-wrapper>
+
+					<!-- TODO: captcha -->
+
+					<button type="submit">Send</button>
+				</form>
 			</section>
 
 			<section id="instagram">
@@ -665,7 +1026,7 @@
 				<!-- TODO: Instagram feed -->
 
 				<link-button>
-					<a href="">Follow us on Instagram</a>
+					<a href="#">Follow us on Instagram</a>
 				</link-button>
 			</section>
 		</main>
@@ -685,7 +1046,7 @@
 
 			<section>
 				<p>
-					<!-- TODO: copy text about data protection -->
+					<filler-text length="50"></filler-text>
 				</p>
 
 				<p>
