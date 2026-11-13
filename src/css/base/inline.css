@@ -1,0 +1,21 @@
+@layer base {
+	a {
+		color: var(--link-color);
+
+		&:visited { color: var(--link-visited-color); }
+		&:focus-visible {
+			color: var(--link-focus-color);
+			outline: var(--focus-outline);
+		}
+
+		&:hover {
+			outline-color: var(--link-hover-color);
+			color: var(--link-hover-color);
+		}
+
+		&:active {
+			outline-color: var(--link-active-color);
+			color: var(--link-active-color);
+		}
+	}
+}

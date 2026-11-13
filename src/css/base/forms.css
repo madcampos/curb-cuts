@@ -1,0 +1,94 @@
+@layer base {
+	/* Input wrapper */
+
+	input-wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: var(--size-2);
+		align-items: start;
+		justify-items: start;
+		margin-block: var(--size-3);
+
+		label { font-weight: bold; }
+	}
+
+	/* Buttons */
+
+	button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		margin: var(--size-3) auto;
+		padding: var(--size-2) var(--size-4);
+		inline-size: 100%;
+		min-inline-size: var(--size-content-0);
+		max-inline-size: var(--size-content-2);
+
+		color: var(--text-1);
+		text-align: center;
+		font-size: inherit;
+		font-family: var(--font-header);
+		text-transform: uppercase;
+
+		background-color: var(--surface-1);
+		border-radius: 100vmax;
+		cursor: pointer;
+
+		&:focus-visible {
+			outline: var(--focus-outline);
+			background-color: var(--surface-2);
+			color: var(--text-2);
+		}
+
+		&:hover {
+			outline: var(--text-1);
+			color: var(--text-1);
+			background-color: var(--magenta-6);
+		}
+
+		&:active {
+			outline: var(--text-6);
+			color: var(--text-6);
+			background-color: var(--text-1);
+		}
+	}
+
+	/* Inputs */
+
+	:is(textarea, input) {
+		appearance: none;
+		border: var(--size-px-0) solid var(--text-3);
+		border-radius: var(--size-px-2);
+		background-color: var(--surface-2);
+		color: var(--text-2);
+		box-sizing: border-box;
+		padding: var(--size-2);
+		font-size: inherit;
+		margin: 0;
+		inline-size: 100%;
+		min-inline-size: var(--size-content-0);
+		max-inline-size: var(--size-content-2);
+
+		&::selection {
+			background-color: var(--surface-1);
+			color: var(--text-1);
+		}
+
+		&:focus-visible { outline: var(--focus-outline); }
+
+		&:hover {
+			outline-color: var(--magenta-6);
+			border-color: var(--magenta-6);
+		}
+	}
+
+	/* Textarea */
+
+	textarea {
+		block-size: 25ch;
+		resize: none;
+		white-space: pre-wrap;
+	}
+}

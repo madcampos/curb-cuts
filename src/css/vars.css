@@ -25,6 +25,8 @@
 	--size-header-3: 45ch;
 	--size-header-4: 96ch;
 
+	--size-px-0: 2px;
+
 	/* Theme colors */
 	--magenta-base: #ce00a4;
 	--magenta-0: oklch(from var(--magenta-base) calc(0.076 + (l - 0.076) * 0.076) calc(c * 0.2) h);
@@ -86,6 +88,9 @@
 	--yellow-11: oklch(from var(--yellow-base) calc(l + (0.988 - l) * 0.8333) calc(c * 0.3333) h);
 	--yellow-12: oklch(from var(--yellow-base) calc(l + (0.988 - l) * 0.988) calc(c * 0.2) h);
 
+	/* Focus outline */
+	--focus-outline: solid var(--size-px-0) var(--surface-1);
+
 	/* Base colors */
 	--text-1: var(--gray-0);
 	--text-2: var(--gray-12);
@@ -97,8 +102,9 @@
 	--surface-4: var(--gray-4);
 
 	/* Link colors */
-	--link-color: ;
-	--link-visited-color: ;
-	--link-hover-color: ;
-	--link-active-color: ;
+	--link-color: var(--magenta-5);
+	--link-visited-color: var(--magenta-3);
+	--link-focus-color: var(--magenta-8);
+	--link-hover-color: var(--magenta-10);
+	--link-active-color: var(--yellow-8);
 }
