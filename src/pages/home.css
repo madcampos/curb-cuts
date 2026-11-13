@@ -5,14 +5,14 @@
 			color: var(--text-0);
 
 			button {
-				border: none;
 				background: transparent;
-				font-size: var(--size-h2);
 				margin: 0;
 				margin-inline-start: auto;
-				display: grid;
-				place-items: center;
-				padding: var(--size-1);
+				padding: 0;
+				inline-size: auto;
+				aspect-ratio: 1 / 1;
+
+				svg { font-size: var(--size-h2); }
 			}
 
 			dialog {
@@ -23,7 +23,11 @@
 				gap: 0;
 
 				header { padding: var(--size-2) var(--size-3); }
-				h2 { font-size: var(--size-h3); }
+
+				h2 {
+					font-size: var(--size-h3);
+					text-align: start;
+				}
 
 				ul {
 					list-style: none;
@@ -546,6 +550,65 @@
 			link-button a { font-size: var(--size-h4); }
 		}
 
-		#contact { background-color: var(--magenta-6); }
+		#contact {
+			background-color: var(--magenta-6);
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto;
+			grid-template-areas:
+				'heading form'
+				'content form';
+			gap: var(--size-3);
+			align-items: center;
+
+			h2 { grid-area: heading; }
+
+			div {
+				grid-area: content;
+				background-color: var(--cyan-6);
+				padding: var(--size-7) var(--size-3);
+				align-self: end;
+				margin-block-end: calc(var(--size-3) * -1);
+			}
+
+			form {
+				grid-area: form;
+				background-color: var(--surface-2);
+				color: var(--text-2);
+				padding-inline: var(--size-4);
+			}
+		}
+
+		#instagram {
+			iframe {
+				display: block;
+				margin-inline: auto;
+				min-inline-size: var(--size-content-0);
+				inline-size: 100%;
+				max-inline-size: var(--size-content-3);
+				block-size: auto;
+				aspect-ratio: 1 / 1;
+			}
+		}
+
+		& > footer {
+			background-color: var(--lime-6);
+			padding: var(--size-7);
+			color: var(--text-2);
+
+			columns-section {
+				max-inline-size: var(--size-content-4);
+				margin-inline: auto;
+				align-items: center;
+			}
+
+			h2 {
+				font-size: var(--size-h3);
+				margin: 0;
+				color: inherit;
+			}
+
+			a { color: inherit; }
+		}
 	}
 }
