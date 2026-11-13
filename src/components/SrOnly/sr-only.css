@@ -1,6 +1,9 @@
 @layer components {
 	sr-only {
+		display: block;
+		font-size: 1px;
 		block-size: 1px;
+		color: transparent;
 		border: 0;
 		clip: rect(0, 0, 0, 0);
 		inline-size: 1px;
