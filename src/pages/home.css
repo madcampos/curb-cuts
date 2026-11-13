@@ -608,7 +608,14 @@
 				color: inherit;
 			}
 
+			h3 { font-size: var(--size-h4); }
+
 			a { color: inherit; }
+
+			img {
+				inline-size: 100%;
+				block-size: auto;
+			}
 		}
 	}
 }
