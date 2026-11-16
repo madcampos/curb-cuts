@@ -17,7 +17,6 @@
 
 		background-color: var(--surface-2);
 		color: var(--text-3);
-		text-align: center;
 
 		picture {
 			grid-area: picture;
@@ -36,6 +35,7 @@
 
 		header {
 			grid-area: heading;
+			text-align: center;
 
 			:is(h1, h2, h3, h4, h5, h6) { font-size: var(--size-h6); }
 		}

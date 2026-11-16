@@ -109,58 +109,15 @@
 		#curb-cuts-and-cast-ons {
 			background-color: var(--cyan-6);
 
-			display: grid;
-
-			grid-template-columns: 1fr 1.5fr;
-			grid-template-rows: auto auto;
-			grid-template-areas:
-				'picture header'
-				'picture text';
-			gap: var(--size-3);
-			align-items: center;
-
 			h2 {
-				grid-area: header;
 				align-self: end;
 				margin: 0;
+				text-align: start;
 			}
 
-			p {
-				grid-area: text;
-				align-self: start;
-				margin: 0;
-			}
-
-			figure {
-				grid-area: picture;
-				display: flex;
-				flex-direction: column;
-				gap: var(--size-2);
-
-				img, figcaption {
-					background-color: var(--surface-2);
-					padding: var(--size-2);
-				}
-
-				img {
-					inline-size: 100%;
-					block-size: auto;
-				}
-
-				figcaption {
-					font-weight: bold;
-					color: var(--cyan-2);
-					text-align: center;
-				}
-			}
-
-			@media (max-width: 30rem) {
-				grid-template-columns: 1fr;
-				grid-template-rows: repeat(3, auto);
-				grid-template-areas:
-					'header'
-					'text'
-					'picture';
+			img {
+				inline-size: 100%;
+				block-size: auto;
 			}
 		}
 
