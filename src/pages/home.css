@@ -106,6 +106,18 @@
 			padding: var(--size-3) var(--size-7);
 		}
 
+		main > hr {
+			border: none;
+			margin: 0;
+			block-size: var(--size-10);
+
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			&:nth-of-type(1) { background-image: url('../images/dividers/divider-1.webp'); }
+			&:nth-of-type(2) { background-image: url('../images/dividers/divider-2.webp'); }
+		}
+
 		#curb-cuts-and-cast-ons {
 			background-color: var(--cyan-6);
 
@@ -118,6 +130,7 @@
 			img {
 				inline-size: 100%;
 				block-size: auto;
+				align-self: center;
 			}
 		}
 
@@ -130,7 +143,7 @@
 				padding: 0;
 
 				& > div {
-					--image-size: var(--size-content-2);
+					--image-size: 30ch;
 
 					display: grid;
 					grid-template-columns: 1fr var(--image-size);
@@ -156,14 +169,14 @@
 							grid-area: picture;
 							inline-size: 100%;
 							block-size: auto;
+							max-block-size: 100%;
 							align-self: center;
-							background-color: var(--surface-1);
-							object-fit: cover;
+							object-fit: contain;
 							object-position: center;
 						}
 					}
 
-					@media (min-width: 30.001rem) {
+					@media (min-width: 40.001rem) {
 						&:nth-of-type(even) {
 							grid-template-columns: var(--image-size) 1fr;
 							grid-template-areas:
@@ -172,51 +185,42 @@
 						}
 					}
 
-					@media (max-width: 30rem) {
+					@media (max-width: 40rem) {
 						grid-template-columns: 1fr;
-						grid-template-rows: repeat(3, auto);
+						grid-template-rows: auto var(--image-size) auto;
 						grid-template-areas:
 							'title'
 							'picture'
 							'text';
 					}
 
-					@media (max-width: 50rem) { --image-size: var(--size-content-1); }
+					@media (max-width: 50rem) { --image-size: 25ch; }
 				}
 			}
 		}
 
+		/* TODO: rethink layout breaks */
 		#what-we-do {
 			background-color: var(--magenta-6);
 
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto auto;
-			grid-template-areas:
-				'header list'
-				'picture list';
-			gap: var(--size-3);
-			justify-items: center;
-
 			h2 {
-				grid-area: header;
 				color: var(--text-4);
 				align-self: end;
 				margin: 0;
+				text-align: start;
 			}
 
 			img {
-				grid-area: picture;
-				inline-size: 80%;
+				inline-size: 100%;
 				block-size: auto;
 				align-self: start;
 			}
 
 			dl {
-				grid-area: list;
 				list-style: none;
 				margin: 0;
 				padding: 0;
+				container-type: inline-size;
 
 				& > div {
 					--image-size: 5rem;
@@ -254,7 +258,7 @@
 
 					div { grid-area: text; }
 
-					@media (min-width: 30.001rem) {
+					@container (min-width: 30.001ch) {
 						&:nth-child(even) {
 							grid-template-columns: 1fr var(--image-size);
 							grid-template-areas:
@@ -265,7 +269,7 @@
 						}
 					}
 
-					@media (max-width: 30rem) {
+					@container (max-width: 30ch) {
 						grid-template-columns: 1fr;
 						grid-template-rows: repeat(3, auto);
 						grid-template-areas:
@@ -277,19 +281,11 @@
 					}
 				}
 			}
-
-			@media (max-width: 50rem) {
-				grid-template-columns: 1fr;
-				grid-template-rows: repeat(3, auto);
-				grid-template-areas:
-					'header'
-					'picture'
-					'list';
-			}
 		}
 
 		#workshops {
 			background-color: var(--magenta-6);
+			padding-block-start: 0;
 
 			h2 {
 				background-color: var(--surface-1);
@@ -313,35 +309,17 @@
 			}
 
 			#mini-workshops {
-				display: grid;
-				grid-template-columns: 3fr 1fr;
-				grid-template-rows: auto 1fr;
-				grid-template-areas:
-					'header header'
-					'content aside';
-				gap: var(--size-3);
-
-				h3 { grid-area: header; }
-				div { grid-area: content; }
-
 				h4 { color: var(--text-4); }
 
 				aside {
-					grid-area: aside;
+					align-self: center;
+					text-align: center;
 
 					img {
 						inline-size: 100%;
+						max-inline-size: var(--size-content-1);
 						block-size: auto;
 					}
-				}
-
-				@media (max-width: 40rem) {
-					grid-template-columns: 1fr;
-					grid-template-rows: repeat(3, auto);
-					grid-template-areas:
-						'header'
-						'content'
-						'aside';
 				}
 			}
 		}
@@ -349,18 +327,17 @@
 		#newsletter {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			grid-template-areas: 'picture cta';
 			align-items: center;
 			justify-items: center;
-			gap: var(--size-3);
-			padding: 0;
+			padding: var(--size-7);
 
-			background-color: var(--magenta-6);
+			background-color: var(--surface-2);
 
 			h2 { font-size: var(--size-h5); }
 
 			hgroup {
-				grid-area: cta;
+				order: 4;
+
 				background-color: var(--lime-6);
 				color: var(--text-2);
 				padding: var(--size-3);
@@ -376,42 +353,52 @@
 			}
 
 			img {
-				grid-area: picture;
-				inline-size: 70%;
-				block-size: auto;
-				max-block-size: 70%;
-				object-fit: contain;
+				inline-size: 100%;
+				block-size: 100%;
+				object-fit: cover;
+
+				&:nth-of-type(1) { order: 1; }
+				&:nth-of-type(2) { order: 2; }
+				&:nth-of-type(3) { order: 3; }
 			}
 
 			@media (max-width: 40rem) {
 				grid-template-columns: 1fr;
-				grid-template-areas:
-					'cta'
-					'picture';
+
+				hgroup { order: 3; }
 			}
 		}
 
-		#what-does-it-cost {
+		#is-there-a-fee-for-workshops {
 			background-color: var(--cyan-6);
 			color: var(--text-2);
+			padding-block-start: 0;
 
-			h2 { color: var(--text-1); }
+			h2 {
+				background-color: var(--surface-1);
+				padding: var(--size-3) var(--size-7);
+				margin: 0 calc(var(--size-7) * -1) var(--size-3);
+				color: var(--text-1);
+			}
+
 			h3 { font-size: var(--size-h4); }
 		}
 
-		#what-are-community-points {
-			background-color: var(--lime-6);
-			color: var(--text-2);
-
-			h2 { color: var(--text-1); }
-		}
-
 		#community-open-studio {
+			padding-block-end: 0;
+
+			link-button a {
+				margin-block: var(--size-8);
+				background-color: var(--magenta-6);
+				color: var(--text-1);
+				font-size: var(--size-h6);
+			}
+
 			dl {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				inline-size: calc(100% + var(--size-7) * 2);
-				margin-inline: calc(var(--size-7) * -1);
+				margin: 0 calc(var(--size-7) * -1);
 
 				& > div {
 					display: flex;
@@ -424,14 +411,12 @@
 					dt {
 						font-family: var(--font-header);
 						font-size: var(--size-h6);
+						text-transform: uppercase;
+						text-align: center;
 					}
 
 					dd {
 						margin: 0;
-						display: grid;
-						grid-template-columns: 1fr 1fr;
-						gap: var(--size-3);
-						align-items: center;
 
 						p { margin: 0; }
 
@@ -442,6 +427,9 @@
 							aspect-ratio: 1 / 1;
 							object-fit: cover;
 							object-position: center;
+							margin-inline: auto;
+							margin-block: var(--size-3);
+							display: block;
 						}
 					}
 
@@ -452,13 +440,17 @@
 						background-color: var(--magenta-6);
 						color: var(--text-1);
 					}
-
-					&:nth-child(even) {
-						dt { text-align: end; }
-						img { order: 2; }
-					}
 				}
+
+				@media (max-width: 40rem) { grid-template-columns: 1fr; }
 			}
+		}
+
+		#what-are-community-points {
+			background-color: var(--lime-6);
+			color: var(--text-2);
+
+			h2 { color: var(--text-1); }
 		}
 
 		#tickets-and-registration {

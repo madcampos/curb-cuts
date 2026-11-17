@@ -1,34 +1,30 @@
 @layer components {
 	workshop-card {
-		--image-size: 25ch;
+		--image-size: 20ch;
 
 		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(4, auto);
+		grid-template-columns: var(--image-size) 1fr;
+		grid-template-rows: auto 1fr auto;
 		grid-template-areas:
-			'picture'
-			'heading'
-			'content'
-			'footer';
-		gap: var(--size-2);
+			'picture heading'
+			'picture content'
+			'picture footer';
+		gap: var(--size-3);
 		padding: var(--size-3);
 		margin: var(--size-3);
-		inline-size: var(--image-size);
+		inline-size: 100%;
 
 		background-color: var(--surface-2);
 		color: var(--text-3);
 
 		picture {
 			grid-area: picture;
-			margin-inline: calc(var(--size-3) * -1);
-			margin-block-start: calc(var(--size-3) * -1);
-			background-color: var(--surface-1);
 
 			img {
 				inline-size: 100%;
 				block-size: 100%;
 				aspect-ratio: 1 / 1;
-				object-fit: cover;
+				object-fit: contain;
 				object-position: center;
 			}
 		}
@@ -36,13 +32,16 @@
 		header {
 			grid-area: heading;
 			text-align: center;
+			align-self: center;
 
 			:is(h1, h2, h3, h4, h5, h6) { font-size: var(--size-h6); }
 		}
 
 		card-content { grid-area: content; }
+
 		footer {
 			grid-area: footer;
+			align-self: center;
 
 			a {
 				margin-block: 0;
@@ -50,7 +49,14 @@
 			}
 		}
 
-		@media (max-width: 50rem) { --image-size: 18ch; }
-		@media (max-width: 40rem) { --image-size: 25ch; }
+		@media (max-width: 40rem) {
+			grid-template-columns: 1fr;
+			grid-template-rows: var(--image-size) auto 1fr auto;
+			grid-template-areas:
+				'picture'
+				'heading'
+				'content'
+				'footer';
+		}
 	}
 }

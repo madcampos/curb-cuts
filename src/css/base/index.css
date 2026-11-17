@@ -1,5 +1,6 @@
 @import url('./base.css');
 @import url('./forms.css');
 @import url('./inline.css');
-@import url('./sectioning.css');
 @import url('./interactive.css');
+@import url('./sectioning.css');
+@import url('./text-content.css');

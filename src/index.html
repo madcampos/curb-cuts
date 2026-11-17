@@ -87,6 +87,7 @@
 		</skip-to-content>
 
 		<header id="home">
+			<!-- #region Menu -->
 			<button
 				type="button"
 				popovertarget="menu"
@@ -126,7 +127,7 @@
 								<a href="#what-we-do">What We Do</a>
 								<ul>
 									<li><a href="#workshops">Winter 2026-2027 Workshops</a></li>
-									<li><a href="#what-does-it-cost">What does It Cost?</a></li>
+									<li><a href="#is-there-a-fee-for-workshops">What does It Cost?</a></li>
 									<li><a href="#what-are-community-points">What are Community Points?</a></li>
 									<li><a href="#community-open-studio">Community Open Studio</a></li>
 									<li><a href="#tickets-and-registration">How do I get Tickets for Community Open Studio?</a></li>
@@ -145,6 +146,7 @@
 					</nav>
 				</dialog-content>
 			</dialog>
+			<!-- #endregion -->
 
 			<hgroup>
 				<img
@@ -157,6 +159,7 @@
 
 				<!-- TODO: align text breaks with design -->
 				<h1>Curb Cuts Arts</h1>
+				<!-- TODO: add TAC logo -->
 
 				<p>
 					<strong>Home of Curb Cuts and Cast-Ons!</strong>
@@ -213,11 +216,11 @@
 
 		<main id="content">
 			<section id="curb-cuts-and-cast-ons">
+				<!-- TODO: align text breaks with design -->
+				<h2>Curb Cuts and Cast-Ons</h2>
+
 				<columns-section>
 					<div>
-						<!-- TODO: align text breaks with design -->
-						<h2>Curb Cuts and Cast-Ons</h2>
-
 						<p>
 							<em>Curb Cuts and Cast-Ons</em> is a low-cost, textile and fibre arts program for the Toronto disabled, Deaf/HoH, and neurodivergent communities.
 							Organized by Elizabeth M<sup>c</sup>Cready, a disabled multi-craft textile and fibre artist.
@@ -237,7 +240,9 @@
 								Monthly Community Open Studio events for social crafting, time to access equipment and tools, book rigid heddle looms, and shop in the accessible
 								popup shop.
 							</li>
-							<li>Mini 30-90 minute workshops including: "learn to knit", "learn to crochet", "Victorian crazy patchwork", and "frame and inlke loom weaving".</li>
+							<li>
+								Mini 30-90 minute workshops including: "learn to knit", "learn to crochet", "Victorian crazy patchwork", and "frame and inlke loom weaving".
+							</li>
 						</ul>
 					</div>
 
@@ -251,16 +256,7 @@
 					/>
 				</columns-section>
 
-				<columns-section>
-					<img
-						src="./images/granny-squares.webp"
-						alt="Some crochet granny squares laid out on a table, with yarn balls on top fo them. The yarn is all in saturated yellow, red, light blue, and dark blue colours."
-						loading="lazy"
-						decoding="async"
-						width="720"
-						height="478"
-					/>
-
+				<columns-section image-first>
 					<div>
 						<p>
 							<em>Curb Cuts and Cast-Ons</em> is the first step towards Liz's goal of starting a disability textile and fibre arts nonprofit in three to five years.
@@ -280,7 +276,7 @@
 						</p>
 
 						<img
-							src="./images/funded-by-tac.svg"
+							src="./images/funded-by-tac-white.svg"
 							alt="Text reading: Funded by the city of Toronto. Below it the Toronto Arts Council logo."
 							loading="lazy"
 							decoding="async"
@@ -288,6 +284,15 @@
 							height="200"
 						/>
 					</div>
+
+					<img
+						src="./images/loom-and-scarf.webp"
+						alt="From left to right, balls of yarn, a rigid-heddle loom, and a striped scarf with twisted fringes. The yarn is in white, light blue, and dark blue."
+						loading="lazy"
+						decoding="async"
+						width="512"
+						height="341"
+					/>
 				</columns-section>
 			</section>
 
@@ -309,12 +314,12 @@
 							</div>
 
 							<img
-								src="./images/whimble-logo.webp"
+								src="./images/accessibility/whimble-logo.webp"
 								alt="Whimble Logo"
 								loading="lazy"
 								decoding="async"
-								width="604"
-								height="381"
+								width="910"
+								height="512"
 							/>
 						</dd>
 					</div>
@@ -333,7 +338,7 @@
 							</div>
 
 							<img
-								src="./images/therapy-dog.webp"
+								src="./images/accessibility/therapy-dog.webp"
 								alt="A photo of a golden retriever looking at the camera with a happy face."
 								loading="lazy"
 								decoding="async"
@@ -357,7 +362,7 @@
 							</div>
 
 							<img
-								src="./images/asl.webp"
+								src="./images/accessibility/asl.webp"
 								alt="A man signing and smiling in ASL."
 								loading="lazy"
 								decoding="async"
@@ -381,13 +386,12 @@
 								<p>For workshops, handouts are available in large print PDF.</p>
 							</div>
 
-							<!-- TODO: image -->
 							<img
-								src="./images/asl.webp"
-								alt="A man doing a sign in ASL."
+								src="./images/accessibility/cane.webp"
+								alt="A top down shot of the feet of a person standing on tactile pavement with a red and white cane besides them."
 								loading="lazy"
 								decoding="async"
-								width="764"
+								width="770"
 								height="512"
 							/>
 						</dd>
@@ -403,7 +407,7 @@
 							</div>
 
 							<img
-								src="./images/service-dog.webp"
+								src="./images/accessibility/service-dog.webp"
 								alt="A white dog with a harness reading &quot;Service Dog&quot;"
 								loading="lazy"
 								decoding="async"
@@ -424,82 +428,88 @@
 			</section>
 
 			<section id="what-we-do">
-				<h2>What we do</h2>
-
-				<img
-					src="./images/knitter.webp"
-					alt="Top down shot of a woman knitting."
-					loading="lazy"
-					decoding="async"
-					width="512"
-					height="341"
-				/>
-
-				<dl>
+				<columns-section>
 					<div>
-						<dt>Workshops</dt>
+						<h2>What we do</h2>
 
-						<dd>
-							<img
-								src="./images/what-we-do/what-we-do-1.webp"
-								alt="Two spools of thread and a measuring tape"
-								loading="lazy"
-								decoding="async"
-								width="256"
-								height="192"
-								aria-hidden="true"
-							/>
-
-							<div>
-								<p>Learn to craft with fabric and yarn with tools and equipment that's chosen for accessibility and fun!</p>
-							</div>
-						</dd>
+						<img
+							src="./images/knitter.webp"
+							alt="Top down shot of a woman knitting."
+							loading="lazy"
+							decoding="async"
+							width="512"
+							height="341"
+						/>
 					</div>
 
-					<div>
-						<dt>Community Open Studio</dt>
+					<dl>
+						<div>
+							<dt>Workshops</dt>
 
-						<dd>
-							<img
-								src="./images/what-we-do/what-we-do-2.webp"
-								alt="A loom."
-								loading="lazy"
-								decoding="async"
-								width="256"
-								height="192"
-								aria-hidden="true"
-							/>
+							<dd>
+								<img
+									src="./images/what-we-do/what-we-do-1.webp"
+									alt="Two spools of thread and a measuring tape"
+									loading="lazy"
+									decoding="async"
+									width="256"
+									height="192"
+									aria-hidden="true"
+								/>
 
-							<div>
-								<p>
-									Access rigid-heddle looms and large equipment,or reserve a crafting kit with high quality tools and supplies while enjoying social crafting time
-									with therapy dogs.
-								</p>
-							</div>
-						</dd>
-					</div>
+								<div>
+									<p>Learn to craft with fabric and yarn with tools and equipment that's chosen for accessibility and fun!</p>
+								</div>
+							</dd>
+						</div>
 
-					<div>
-						<dt>Accessible Popup Shop</dt>
+						<div>
+							<dt>Community Open Studio</dt>
 
-						<dd>
-							<img
-								src="./images/what-we-do/what-we-do-3.webp"
-								alt="A woman holding balls of yarn."
-								loading="lazy"
-								decoding="async"
-								width="256"
-								height="192"
-								aria-hidden="true"
-							/>
+							<dd>
+								<img
+									src="./images/what-we-do/what-we-do-2.webp"
+									alt="A loom."
+									loading="lazy"
+									decoding="async"
+									width="256"
+									height="192"
+									aria-hidden="true"
+								/>
 
-							<div>
-								<p>Support your community by shopping HST free in a calm wheelchair accessible environment, with braille and large print labels.</p>
-							</div>
-						</dd>
-					</div>
-				</dl>
+								<div>
+									<p>
+										Access rigid-heddle looms and large equipment,or reserve a crafting kit with high quality tools and supplies while enjoying social crafting
+										time with therapy dogs.
+									</p>
+								</div>
+							</dd>
+						</div>
+
+						<div>
+							<dt>Accessible Popup Shop</dt>
+
+							<dd>
+								<img
+									src="./images/what-we-do/what-we-do-3.webp"
+									alt="A woman holding balls of yarn."
+									loading="lazy"
+									decoding="async"
+									width="256"
+									height="192"
+									aria-hidden="true"
+								/>
+
+								<div>
+									<p>Support your community by shopping HST free in a calm wheelchair accessible environment, with braille and large print labels.</p>
+								</div>
+							</dd>
+						</div>
+					</dl>
+				</columns-section>
 			</section>
+
+			<hr />
 
 			<section id="workshops">
 				<h2>Winter 2026-2027 Workshops</h2>
@@ -512,11 +522,11 @@
 							<workshop-card>
 								<picture>
 									<img
-										src="./images/workshops/yarn-dyeing-workshop.webp"
-										alt="Multiple coloured yarn skeins drying in a rack."
+										src="./images/workshops/workshop-1.webp"
+										alt="Multiple yarn skeins, kintting projects, and fibres. All in different colours making a rainbow pattern."
 										loading="lazy"
 										decoding="async"
-										width="682"
+										width="512"
 										height="512"
 									/>
 								</picture>
@@ -531,17 +541,19 @@
 								</card-content>
 
 								<footer>
-									<link-button>
-										<a
-											href="#"
-											target="_blank"
-											rel="noopener noreferrer"
-											referrerpolicy="no-referrer"
-										>
-											<span>Register on Eventbrite</span>
-											<sr-only>for Yarn Dyeing Workshop</sr-only>
-										</a>
-									</link-button>
+									<!--
+										<link-button>
+											<a
+												href="#"
+												target="_blank"
+												rel="noopener noreferrer"
+												referrerpolicy="no-referrer"
+											>
+												<span>Register on Eventbrite</span>
+												<sr-only>for Yarn Dyeing Workshop</sr-only>
+											</a>
+										</link-button>
+									-->
 								</footer>
 							</workshop-card>
 						</li>
@@ -550,8 +562,8 @@
 							<workshop-card>
 								<picture>
 									<img
-										src="./images/workshops/rigid-heddle-weaving-workshop.webp"
-										alt="A rigid-heddle loom."
+										src="./images/workshops/workshop-2.webp"
+										alt="A rigid-heddle loom with a stripped fabric, the colours of the stripes make a rainbow pattern."
 										loading="lazy"
 										decoding="async"
 										width="512"
@@ -574,17 +586,19 @@
 								</card-content>
 
 								<footer>
-									<link-button>
-										<a
-											href="#"
-											target="_blank"
-											rel="noopener noreferrer"
-											referrerpolicy="no-referrer"
-										>
-											<span>View Project</span>
-											<sr-only>for Rigid-Heddle Weaving</sr-only>
-										</a>
-									</link-button>
+									<!--
+										<link-button>
+											<a
+												href="#"
+												target="_blank"
+												rel="noopener noreferrer"
+												referrerpolicy="no-referrer"
+											>
+												<span>View Project</span>
+												<sr-only>for Rigid-Heddle Weaving</sr-only>
+											</a>
+										</link-button>
+									-->
 								</footer>
 							</workshop-card>
 						</li>
@@ -593,11 +607,11 @@
 							<workshop-card>
 								<picture>
 									<img
-										src="./images/workshops/hand-sewing-workshop.webp"
+										src="./images/workshops/workshop-3.webp"
 										alt="Small cuts of colourful and patterned fabric with spools of thread on top of it and a pair of scissors."
 										loading="lazy"
 										decoding="async"
-										width="769"
+										width="512"
 										height="512"
 									/>
 								</picture>
@@ -612,17 +626,19 @@
 								</card-content>
 
 								<footer>
-									<link-button>
-										<a
-											href="#"
-											target="_blank"
-											rel="noopener noreferrer"
-											referrerpolicy="no-referrer"
-										>
-											<span>View Project</span>
-											<sr-only>for Hand-Sewing</sr-only>
-										</a>
-									</link-button>
+									<!--
+										<link-button>
+											<a
+												href="#"
+												target="_blank"
+												rel="noopener noreferrer"
+												referrerpolicy="no-referrer"
+											>
+												<span>View Project</span>
+												<sr-only>for Hand-Sewing</sr-only>
+											</a>
+										</link-button>
+									-->
 								</footer>
 							</workshop-card>
 						</li>
@@ -632,51 +648,53 @@
 				<section id="mini-workshops">
 					<h3>Mini-Workshops</h3>
 
-					<div>
-						<p>
-							Mini-workshops are 30 to 90 minute workshops that run before or during Community Open Studio time. They are either group workshops (4-8 people), or
-							semi-private (2 or 3 people). Mini-workshops either teach beginner skills, or expand on what you learned in a regular workshop.
-						</p>
+					<columns-section>
+						<div>
+							<p>
+								Mini-workshops are 30 to 90 minute workshops that run before or during Community Open Studio time. They are either group workshops (4-8 people), or
+								semi-private (2 or 3 people). Mini-workshops either teach beginner skills, or expand on what you learned in a regular workshop.
+							</p>
 
-						<h4>Winter 2026-2027 Mini-Workshops</h4>
+							<h4>Winter 2026-2027 Mini-Workshops</h4>
 
-						<ul>
-							<li>Semi-private learn to knit</li>
-							<li>Semi-private learn to crochet</li>
-							<li>Learn Victorian crazy patchwork</li>
-							<li>Inklette loom weaving</li>
-						</ul>
+							<ul>
+								<li>Semi-private learn to knit</li>
+								<li>Semi-private learn to crochet</li>
+								<li>Learn Victorian crazy patchwork</li>
+								<li>Inklette loom weaving</li>
+							</ul>
 
-						<p>Depending on studio equipment purchases the following might be also offered:</p>
+							<p>Depending on studio equipment purchases the following might be also offered:</p>
 
-						<ul>
-							<li>Circular machine knitting</li>
-							<li>Accessible machine sewing basics</li>
-						</ul>
-					</div>
+							<ul>
+								<li>Circular machine knitting</li>
+								<li>Accessible machine sewing basics</li>
+							</ul>
+						</div>
 
-					<aside>
-						<img
-							src="./images/crochet.webp"
-							alt="A woman on the background crocheting."
-							loading="lazy"
-							decoding="async"
-							width="512"
-							height="769"
-						/>
+						<aside>
+							<img
+								src="./images/workshops/mini-workshops.webp"
+								alt="A woman on the background crocheting."
+								loading="lazy"
+								decoding="async"
+								width="341"
+								height="512"
+							/>
 
-						<link-button>
-							<a
-								href="https://curbcutsarts.eventbrite.ca/"
-								target="_blank"
-								rel="noopener noreferrer"
-								referrerpolicy="no-referrer"
-							>
-								<span>Register on Eventbrite</span>
-								<sr-only>for Mini-Workshops</sr-only>
-							</a>
-						</link-button>
-					</aside>
+							<link-button>
+								<a
+									href="https://curbcutsarts.eventbrite.ca/"
+									target="_blank"
+									rel="noopener noreferrer"
+									referrerpolicy="no-referrer"
+								>
+									<span>Register on Eventbrite</span>
+									<sr-only>for Mini-Workshops</sr-only>
+								</a>
+							</link-button>
+						</aside>
+					</columns-section>
 				</section>
 			</section>
 
@@ -697,7 +715,25 @@
 				</hgroup>
 
 				<img
-					src="./images/sign-up.webp"
+					src="./images/newsletter/newsletter-1.webp"
+					alt="A circular quilting project in clourful fabric, with two hands working on it."
+					loading="lazy"
+					decoding="async"
+					width="770"
+					height="512"
+				/>
+
+				<img
+					src="./images/newsletter/newsletter-2.webp"
+					alt="Some yarn balls with knitting needles on them. The yarn colours range from white, to yellow, to light brown."
+					loading="lazy"
+					decoding="async"
+					width="770"
+					height="512"
+				/>
+
+				<img
+					src="./images/newsletter/newsletter-3.webp"
 					alt="A pencil with the text &quot;Sign Up&quot;, followed by a paper plane."
 					loading="lazy"
 					decoding="async"
@@ -706,9 +742,7 @@
 				/>
 			</section>
 
-			<hr />
-
-			<section id="what-does-it-cost">
+			<section id="is-there-a-fee-for-workshops">
 				<h2>Is there a fee for Workshops?</h2>
 
 				<columns-section text-columns>
@@ -752,15 +786,6 @@
 
 				<p>You don't have to take a 4-hour or mini-workshop to come to the <em>Community Open Studio</em>!</p>
 
-				<link-button>
-					<a
-						href="https://curbcutsarts.eventbrite.ca/"
-						target="_blank"
-						rel="noopener noreferrer"
-						referrerpolicy="no-referrer"
-					>Get your ticket on Eventbrite</a>
-				</link-button>
-
 				<ul>
 					<li>Everything is at wheelchair user height.</li>
 					<li>Braille and tactile labels will be on many items.</li>
@@ -771,9 +796,17 @@
 					<li><strong>We have a Nespresso for hot and ice coffee!</strong></li>
 				</ul>
 
+				<link-button>
+					<a
+						href="https://curbcutsarts.eventbrite.ca/"
+						target="_blank"
+						rel="noopener noreferrer"
+						referrerpolicy="no-referrer"
+					>Get your ticket on Eventbrite</a>
+				</link-button>
+
 				<dl>
 					<div>
-						<!-- TODO: all caps -->
 						<dt>Reserve craft tool kits, book equipment, and use free upcycled materials</dt>
 						<dd>
 							<img
@@ -854,7 +887,7 @@
 							/>
 
 							<ul>
-								<li>Shop at member prices with either your community points or your debit/credit card</li>
+								<li>Shop at member prices with either your <a href="#what-are-community-points">community points</a> or your debit/credit card</li>
 								<li>A large percentage goes towards supporting the Curb Cuts and Cast-Ons project.</li>
 								<li>
 									Braille and large print labels, nothing blocking wheelchair access to products, and sensory-friendly yarns and fabric make things accessible!
@@ -875,21 +908,22 @@
 						registration</strong>
 					<br />
 					<strong>Follow us on <a href="https://www.instagram.com/curbcutsarts/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Instagram</a> and
-						subscribe to our free <a href="https://curbcutsarts.substack.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"
-						>Substack</a></strong> to be the first to hear about events.
+						subscribe to our free <a href="https://curbcutsarts.substack.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Substack</a> to be
+						the first to hear about events.</strong>
 				</p>
 
 				<ul>
 					<li>$8.00 ticket</li>
 					<li>ODSP recipients ($4.00)</li>
-					<li>Can use community points <!-- TODO: link for "read more here" --></li>
+					<li>Can use <a href="#what-are-community-points">community points</a></li>
 				</ul>
 
-				<h3>Tool Kits Are Available To Reserve For Free!</h3>
+				<blockquote>
+					<p><strong>Tool kits are available to reserve for free!</strong></p>
+				</blockquote>
 
-				<p><sup>*</sup> Kits can be booked at registration. Some additional kits are avaiable on a first-come, first-served basis without reseving.</p>
+				<p><em>* Kits can be booked at registration. Some additional kits are available on a first-come, first-served basis without reserving.</em></p>
 
-				<!-- TODO: add cards with materials + book larger equipment -->
 				<!-- TODO: add CTA -->
 			</section>
 
@@ -927,6 +961,8 @@
 					<!-- TODO: add image -->
 				</columns-section>
 			</section>
+
+			<!-- TODO: add cards with materials + book larger equipment -->
 
 			<hr />
 
@@ -1257,6 +1293,7 @@
 				</link-button>
 			</section>
 		</main>
+
 		<footer>
 			<columns-section>
 				<section>
