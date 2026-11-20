@@ -15,7 +15,8 @@
 		"start": "vite",
 		"prepreview": "pnpm run build",
 		"preview": "vite preview",
-		"build": "vite build"
+		"build": "vite build",
+		"generate-icons": "node scripts/generate-icons.ts --svg \"./public/favicon.svg\" --manifest \"./public/site.webmanifest\" --output \"./public\" --ios \"./icons/apple-touch-icon.png\" --favicon"
 	},
 	"keywords": [],
 	"author": "",
@@ -38,9 +39,11 @@
 		"@mad-c/config": "^4.2.1",
 		"@types/node": "^26.6.6",
 		"dprint": "^0.64.3",
+		"icojs": "^1.0.1",
 		"open-props": "^1.7.23",
 		"oxlint": "^1.90.0",
 		"oxlint-tsgolint": "^7.0.2005",
+		"puppeteer": "^25.17.0",
 		"typescript": "^7.0.2",
 		"varlock": "^1.24.0",
 		"vite": "^8.3.5"
