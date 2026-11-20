@@ -1,5 +1,5 @@
 @layer components {
-	workshop-card {
+	c-card {
 		--image-size: 20ch;
 
 		display: grid;
@@ -15,7 +15,7 @@
 		inline-size: 100%;
 
 		background-color: var(--surface-2);
-		color: var(--text-3);
+		color: var(--text-2);
 
 		picture {
 			grid-area: picture;

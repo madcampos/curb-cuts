@@ -58,25 +58,54 @@
 			hgroup {
 				display: grid;
 
-				grid-template-columns: auto 2fr 1fr;
+				grid-template-columns: auto 3fr 1fr;
 				align-items: start;
 				padding: var(--size-7);
 				max-inline-size: var(--size-content-4);
 				gap: var(--size-3);
 				margin-inline: auto;
 
+				& > img {
+					max-inline-size: var(--size-content-0);
+					align-self: start;
+				}
+
 				h1 {
 					color: var(--text-4);
 					margin: 0;
 					line-height: 1;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: start;
+					justify-content: start;
+					text-align: start;
+					gap: 0.2em;
+
+					span { inline-size: fit-content; }
 
 					@media (max-width: 30rem) { font-size: var(--size-h2); }
+				}
+
+				div img {
+					inline-size: 30ch;
+
+					@media (max-width: 30rem) { inline-size: 100%; }
+				}
+
+				@media (max-width: 50rem) {
+					grid-template-columns: auto 1fr;
+
+					p { grid-column: span 2; }
 				}
 
 				@media (max-width: 30rem) {
 					grid-template-columns: 1fr;
 					justify-items: center;
 					text-align: center;
+
+					h1 { justify-content: center; }
+					p { grid-column: 1; }
+					img { inline-size: 50%; }
 				}
 			}
 
@@ -89,8 +118,6 @@
 				background-color: var(--surface-1);
 
 				img {
-					inline-size: 100%;
-					block-size: auto;
 					object-fit: cover;
 					object-position: center;
 					aspect-ratio: 2 / 3;
@@ -108,14 +135,17 @@
 
 		main > hr {
 			border: none;
-			margin: 0;
-			block-size: var(--size-10);
+			margin: 0 auto;
+			block-size: 10rem;
+			max-inline-size: var(--size-content-4);
 
 			background-size: cover;
 			background-repeat: no-repeat;
+			background-position: center;
 
 			&:nth-of-type(1) { background-image: url('../images/dividers/divider-1.webp'); }
 			&:nth-of-type(2) { background-image: url('../images/dividers/divider-2.webp'); }
+			&:nth-of-type(3) { background-image: url('../images/dividers/divider-3.webp'); }
 		}
 
 		#curb-cuts-and-cast-ons {
@@ -125,12 +155,6 @@
 				align-self: end;
 				margin: 0;
 				text-align: start;
-			}
-
-			img {
-				inline-size: 100%;
-				block-size: auto;
-				align-self: center;
 			}
 		}
 
@@ -167,10 +191,7 @@
 
 						img {
 							grid-area: picture;
-							inline-size: 100%;
-							block-size: auto;
 							max-block-size: 100%;
-							align-self: center;
 							object-fit: contain;
 							object-position: center;
 						}
@@ -208,12 +229,6 @@
 				align-self: end;
 				margin: 0;
 				text-align: start;
-			}
-
-			img {
-				inline-size: 100%;
-				block-size: auto;
-				align-self: start;
 			}
 
 			dl {
@@ -315,11 +330,7 @@
 					align-self: center;
 					text-align: center;
 
-					img {
-						inline-size: 100%;
-						max-inline-size: var(--size-content-1);
-						block-size: auto;
-					}
+					img { max-inline-size: var(--size-content-1); }
 				}
 			}
 		}
@@ -353,7 +364,6 @@
 			}
 
 			img {
-				inline-size: 100%;
 				block-size: 100%;
 				object-fit: cover;
 
@@ -386,6 +396,8 @@
 
 		#community-open-studio {
 			padding-block-end: 0;
+
+			h2 { color: var(--text-4); }
 
 			link-button a {
 				margin-block: var(--size-8);
@@ -421,9 +433,7 @@
 						p { margin: 0; }
 
 						img {
-							inline-size: 100%;
 							max-inline-size: var(--size-content-1);
-							block-size: auto;
 							aspect-ratio: 1 / 1;
 							object-fit: cover;
 							object-position: center;
@@ -446,24 +456,105 @@
 			}
 		}
 
+		#tickets-and-registration {
+			color: var(--text-1);
+
+			h2 { color: var(--text-4); }
+
+			link-button a { background-color: var(--magenta-6); }
+		}
+		#what-equipment-and-tools-are-available {
+			background-color: var(--magenta-6);
+			color: var(--text-1);
+
+			h2, h3 { color: var(--text-4); }
+		}
+
+		#tool-kits-available-to-reserve-for-free, #book-larger-equipment {
+			background-color: var(--magenta-6);
+
+			h3 { color: var(--text-4); }
+
+			dl > div {
+				--image-size: 20ch;
+
+				display: grid;
+				grid-template-columns: var(--image-size) 1fr;
+				grid-template-rows: auto 1fr;
+				grid-template-areas:
+					'picture heading'
+					'picture content';
+				gap: var(--size-3);
+				padding: var(--size-3);
+				margin: var(--size-3) 0;
+
+				background-color: var(--surface-2);
+				color: var(--text-2);
+
+				dd { display: contents; }
+
+				img {
+					grid-area: picture;
+					min-inline-size: 5ch;
+					inline-size: 100%;
+					block-size: auto;
+					max-block-size: 100%;
+					aspect-ratio: 1 / 1;
+					object-fit: contain;
+					object-position: center;
+				}
+
+				figure {
+					grid-area: picture;
+					display: flex;
+					flex-direction: column;
+					gap: var(--size-3);
+					justify-content: center;
+
+					@media (max-width: 40rem) {
+						flex-direction: row;
+
+						img { inline-size: calc(50% - var(--size-3)); }
+					}
+				}
+
+				dt {
+					grid-area: heading;
+					text-align: center;
+					align-self: center;
+					font-size: var(--size-h6);
+					font-family: var(--font-header);
+				}
+
+				div { grid-area: content; }
+
+				@media (max-width: 40rem) {
+					grid-template-columns: 1fr;
+					grid-template-rows: auto var(--image-size) 1fr;
+					grid-template-areas:
+						'heading'
+						'picture'
+						'content';
+				}
+			}
+		}
+
 		#what-are-community-points {
 			background-color: var(--lime-6);
 			color: var(--text-2);
 
 			h2 { color: var(--text-1); }
-		}
 
-		#tickets-and-registration {
-			background-color: var(--cyan-6);
-			color: var(--text-2);
+			img {
+				aspect-ratio: 1 / 1;
+				object-fit: cover;
+			}
 		}
 
 		#about-the-lead-artist {
 			background-color: var(--magenta-6);
 
 			img {
-				inline-size: 100%;
-				block-size: auto;
 				aspect-ratio: 1 / 1;
 				object-fit: contain;
 				object-position: center;
@@ -488,25 +579,39 @@
 				}
 			}
 
-			img {
-				inline-size: 100%;
-				block-size: auto;
-				aspect-ratio: 1 / 1;
-				object-fit: contain;
-				object-position: center;
+			figure {
+				background-color: var(--surface-2);
+				padding: var(--size-2);
+				align-self: center;
+
+				img {
+					aspect-ratio: 1 / 1;
+					object-fit: cover;
+					object-position: center;
+				}
+
+				figcaption {
+					font-size: var(--font-size-0);
+					text-align: center;
+					font-style: italic;
+				}
 			}
 
-			link-button a { font-size: var(--size-h4); }
+			link-button a { font-size: var(--size-h6); }
 		}
 
 		#contact {
 			background-color: var(--magenta-6);
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			/* grid-template-columns: 1fr 1fr; */
+			grid-template-columns: 1fr;
 			grid-template-rows: auto auto;
-			grid-template-areas:
+			/* grid-template-areas:
 				'heading form'
-				'content form';
+				'content form'; */
+			grid-template-areas:
+				'heading'
+				'content';
 			gap: var(--size-3);
 			align-items: center;
 
@@ -515,7 +620,7 @@
 			div {
 				grid-area: content;
 				background-color: var(--cyan-6);
-				padding: var(--size-7) var(--size-3);
+				padding: var(--size-3);
 				align-self: end;
 				margin-block-end: calc(var(--size-3) * -1);
 			}
@@ -526,29 +631,48 @@
 				color: var(--text-2);
 				padding-inline: var(--size-4);
 			}
+
+			address {
+				font-style: normal;
+				p { margin: 0; }
+			}
 		}
 
 		#instagram {
+			background-color: var(--lime-6);
+			color: var(--text-2);
+
 			iframe {
 				display: block;
 				margin-inline: auto;
 				min-inline-size: var(--size-content-0);
 				inline-size: 100%;
-				max-inline-size: var(--size-content-3);
+				max-inline-size: var(--size-content-2);
 				block-size: auto;
 				aspect-ratio: 1 / 1;
 			}
 		}
 
 		& > footer {
-			background-color: var(--lime-6);
+			background-color: var(--surface-1);
 			padding: var(--size-7);
-			color: var(--text-2);
+			color: var(--text-1);
+
+			& > div {
+				display: flex;
+				flex-direction: column;
+				color: var(--text-4);
+
+				img { inline-size: var(--size-content-0); }
+			}
 
 			columns-section {
 				max-inline-size: var(--size-content-4);
-				margin-inline: auto;
+				margin: var(--size-8) auto;
 				align-items: center;
+
+				link-button:nth-of-type(1) a { background-color: var(--cyan-6); }
+				link-button:nth-of-type(2) a { background-color: var(--magenta-6); }
 			}
 
 			h2 {
@@ -560,11 +684,6 @@
 			h3 { font-size: var(--size-h4); }
 
 			a { color: inherit; }
-
-			img {
-				inline-size: 100%;
-				block-size: auto;
-			}
 		}
 	}
 }

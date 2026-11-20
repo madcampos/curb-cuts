@@ -87,7 +87,6 @@
 		</skip-to-content>
 
 		<header id="home">
-			<!-- #region Menu -->
 			<button
 				type="button"
 				popovertarget="menu"
@@ -146,7 +145,6 @@
 					</nav>
 				</dialog-content>
 			</dialog>
-			<!-- #endregion -->
 
 			<hgroup>
 				<img
@@ -157,9 +155,22 @@
 					height="100"
 				/>
 
-				<!-- TODO: align text breaks with design -->
-				<h1>Curb Cuts Arts</h1>
-				<!-- TODO: add TAC logo -->
+				<div>
+					<h1>
+						<span>Curb</span>
+						<span>Cuts</span>
+						<span>Arts</span>
+					</h1>
+
+					<img
+						src="./images/funded-by-tac-white.svg"
+						alt="Text reading: Funded by the city of Toronto. Below it the Toronto Arts Council logo."
+						loading="lazy"
+						decoding="async"
+						width="500"
+						height="200"
+					/>
+				</div>
 
 				<p>
 					<strong>Home of Curb Cuts and Cast-Ons!</strong>
@@ -241,7 +252,7 @@
 								popup shop.
 							</li>
 							<li>
-								Mini 30-90 minute workshops including: "learn to knit", "learn to crochet", "Victorian crazy patchwork", and "frame and inlke loom weaving".
+								Mini 30-90 minute workshops including: "learn to knit", "learn to crochet", "Victorian crazy patchwork", and "frame and inkle loom weaving".
 							</li>
 						</ul>
 					</div>
@@ -519,7 +530,7 @@
 
 					<ul>
 						<li>
-							<workshop-card>
+							<c-card>
 								<picture>
 									<img
 										src="./images/workshops/workshop-1.webp"
@@ -555,11 +566,11 @@
 										</link-button>
 									-->
 								</footer>
-							</workshop-card>
+							</c-card>
 						</li>
 
 						<li>
-							<workshop-card>
+							<c-card>
 								<picture>
 									<img
 										src="./images/workshops/workshop-2.webp"
@@ -600,11 +611,11 @@
 										</link-button>
 									-->
 								</footer>
-							</workshop-card>
+							</c-card>
 						</li>
 
 						<li>
-							<workshop-card>
+							<c-card>
 								<picture>
 									<img
 										src="./images/workshops/workshop-3.webp"
@@ -640,7 +651,7 @@
 										</link-button>
 									-->
 								</footer>
-							</workshop-card>
+							</c-card>
 						</li>
 					</ul>
 				</section>
@@ -757,20 +768,33 @@
 
 				<h3>Workshops and Mini-Workshops fee</h3>
 
-				<ul>
-					<li>Nominal materials fee ($8 &mdash; $20)</li>
-					<li>50% off for ODSP Recipients, max fee $6 ($4 &mdash; $6)</li>
-					<li>Use community points for 50% of the materials fee (ODSP recipients can use their community points for 100% of the materials fee)</li>
-				</ul>
+				<columns-section>
+					<div>
+						<ul>
+							<li>Nominal materials fee ($8 &mdash; $20)</li>
+							<li>50% off for ODSP Recipients, max fee $6 ($4 &mdash; $6)</li>
+							<li>Use community points for 50% of the materials fee (ODSP recipients can use their community points for 100% of the materials fee)</li>
+						</ul>
 
-				<blockquote>
-					<p>
-						<strong>Did you know that a 4-hour <em>Introduction to Rigid-Heddle Weaving</em> workshop without arts grant funding typically cost ~$200 + materials + HST,
-							and the looms are $300 &mdash; $800 each?</strong>
-					</p>
-				</blockquote>
+						<blockquote>
+							<p>
+								<strong>Did you know that a 4-hour <em>Introduction to Rigid-Heddle Weaving</em> workshop without arts grant funding typically cost ~$200 +
+									materials + HST, and the looms are $300 &mdash; $800 each?</strong>
+							</p>
+						</blockquote>
 
-				<p>Thanks to the Toronto Arts Council for making this financially accessible.</p>
+						<p>Thanks to the Toronto Arts Council for making this financially accessible.</p>
+					</div>
+
+					<img
+						src="./images/loom-and-yarn.webp"
+						alt="A loom with a striped fabric on the colours white, purple, and grey."
+						loading="lazy"
+						decoding="async"
+						width="639"
+						height="512"
+					/>
+				</columns-section>
 			</section>
 
 			<hr />
@@ -832,7 +856,7 @@
 						<dd>
 							<img
 								src="./images/studio/studio-2.webp"
-								alt=""
+								alt="A pair of hands holding a yarn ball, on the background a shelf with multiple balls of yarn."
 								loading="lazy"
 								decoding="async"
 								width="764"
@@ -857,7 +881,7 @@
 						<dd>
 							<img
 								src="./images/studio/studio-3.webp"
-								alt=""
+								alt="A painting of multiple hands overlapping one another."
 								loading="lazy"
 								decoding="async"
 								width="771"
@@ -879,7 +903,7 @@
 						<dd>
 							<img
 								src="./images/studio/studio-4.webp"
-								alt=""
+								alt="Close focus on two knitting needles in a project with purple yarn."
 								loading="lazy"
 								decoding="async"
 								width="771"
@@ -903,28 +927,50 @@
 			<section id="tickets-and-registration">
 				<h2>How do I get Tickets for Community Open Studio?</h2>
 
-				<p>
-					<strong>Visit <a href="https://curbcutsarts.eventbrite.ca/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Eventbrite</a> for dates and
-						registration</strong>
-					<br />
-					<strong>Follow us on <a href="https://www.instagram.com/curbcutsarts/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Instagram</a> and
-						subscribe to our free <a href="https://curbcutsarts.substack.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Substack</a> to be
-						the first to hear about events.</strong>
-				</p>
+				<columns-section>
+					<div>
+						<p>
+							<strong>Visit <a href="https://curbcutsarts.eventbrite.ca/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Eventbrite</a> for
+								dates and registration</strong>
+							<br />
+							<strong>Follow us on <a href="https://www.instagram.com/curbcutsarts/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"
+								>Instagram</a> and subscribe to our free <a
+									href="https://curbcutsarts.substack.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									referrerpolicy="no-referrer"
+								>Substack</a> to be the first to hear about events.</strong>
+						</p>
 
-				<ul>
-					<li>$8.00 ticket</li>
-					<li>ODSP recipients ($4.00)</li>
-					<li>Can use <a href="#what-are-community-points">community points</a></li>
-				</ul>
+						<ul>
+							<li>$8.00 ticket</li>
+							<li>ODSP recipients ($4.00)</li>
+							<li>Can use <a href="#what-are-community-points">community points</a></li>
+						</ul>
 
-				<blockquote>
-					<p><strong>Tool kits are available to reserve for free!</strong></p>
-				</blockquote>
+						<blockquote>
+							<p><strong>Tool kits are available to reserve for free!</strong></p>
+						</blockquote>
 
-				<p><em>* Kits can be booked at registration. Some additional kits are available on a first-come, first-served basis without reserving.</em></p>
+						<link-button>
+							<a
+								href="https://curbcutsarts.eventbrite.ca/"
+								target="_blank"
+								rel="noopener noreferrer"
+								referrerpolicy="no-referrer"
+							>Get your ticket on Eventbrite</a>
+						</link-button>
+					</div>
 
-				<!-- TODO: add CTA -->
+					<img
+						src="./images/get-your-tickets.webp"
+						alt="Text reading: &quot;Get your tickets&quot; in a cursive font."
+						loading="lazy"
+						decoding="async"
+						width="512"
+						height="512"
+					/>
+				</columns-section>
 			</section>
 
 			<section id="what-equipment-and-tools-are-available">
@@ -958,46 +1004,354 @@
 						</ul>
 					</div>
 
-					<!-- TODO: add image -->
+					<img
+						src="./images/equipment/iron.webp"
+						alt="A steam iron."
+						loading="lazy"
+						decoding="async"
+						width="614"
+						height="512"
+					/>
 				</columns-section>
 			</section>
 
-			<!-- TODO: add cards with materials + book larger equipment -->
+			<section id="tool-kits-available-to-reserve-for-free">
+				<h3>Tool Kits Available to Reserve for Free</h3>
+
+				<p><em>* Kits can be booked at registration. Some additional kits are available on a first-come, first-served basis without reserving.</em></p>
+
+				<dl>
+					<div>
+						<dt>Hand Sewing Kits</dt>
+						<dd>
+							<img
+								src="./images/kits/kits-1.webp"
+								alt="Sewing supplies includding a thread spools, pins, and clips. All in blue hues."
+								loading="lazy"
+								decoding="async"
+								width="512"
+								height="512"
+							/>
+							<div>
+								<ul>
+									<li>Needles and needle threader</li>
+									<li>Friskars brand fabric shears</li>
+									<li>Sewing clips and pins and pin cushion</li>
+									<li>Pinking (zigzag) fabric scissors</li>
+									<li>Self-healing cutting mats and rotary cutter*</li>
+									<li>Choice of thimble</li>
+									<li>Seam ripper</li>
+									<li>Taylor’s chalk</li>
+									<li>Measuring tape, clear quilting rulers and templates</li>
+									<li>Beeswax for thread conditioning.</li>
+									<li>Black, white, or coloured thread (colours vary).</li>
+									<li>Point turner</li>
+								</ul>
+
+								<p><em>*For safety, use of the cutter requires either Hand Sewing 101, or an orientation.</em></p>
+							</div>
+						</dd>
+					</div>
+					<div>
+						<dt>Embroidery and Cross Stitch Tool Kits</dt>
+						<dd>
+							<img
+								src="./images/kits/kits-2.webp"
+								alt="An embroidery project in read in the shape of a heart."
+								loading="lazy"
+								decoding="async"
+								width="512"
+								height="512"
+							/>
+
+							<div>
+								<ul>
+									<li>Embroidery Hoop</li>
+									<li>Tapestry and embroidery needles</li>
+									<li>Pin cushion and straight pins</li>
+									<li>Up to 5 skeins of embroidery thread, and five unfilled bobbins per event to take home</li>
+									<li>Marking pen, tailor's chalk</li>
+									<li>Scrap fabric (“cabbage”) for creative reuse/upcycling projects</li>
+									<li>Embroidery scissors</li>
+									<li>Thread snips</li>
+									<li>Needle threader</li>
+									<li>Choice of thimble</li>
+								</ul>
+							</div>
+						</dd>
+					</div>
+					<div>
+						<dt>Knitting, Crochet, and Loom Knitting Tool Kit</dt>
+						<dd>
+							<img
+								src="./images/kits/kits-3.webp"
+								alt="A crochet granny square in a blocking board."
+								loading="lazy"
+								decoding="async"
+								width="512"
+								height="512"
+							/>
+
+							<div>
+								<ul>
+									<li>Yarn cutter</li>
+									<li>Darning needle</li>
+									<li>Bent tip tapestry needle</li>
+									<li>Stitch holder</li>
+									<li>Metal cable needles (wood available to sign our)</li>
+									<li>Gauge ruler</li>
+									<li>Needle sizer</li>
+									<li>Hook sizer</li>
+									<li>Magnifier</li>
+									<li>Tape measure</li>
+									<li>Yarn holder/bowl</li>
+									<li>“Oops” fix it two ended tool</li>
+									<li>French knitter (“knitting dolly”) and hook</li>
+									<li>Knitting needles and crochet hooks are available for use during open studio.</li>
+									<li>Plastic knitting loom(s)</li>
+								</ul>
+								<p>
+									<em>*Projects must be off of knitting needles at end of event. (Put on life-lines) Various knitting needles and crochet hooks are available at
+										member prices in the popup shop.</em>
+								</p>
+							</div>
+						</dd>
+					</div>
+					<div>
+						<dt>Small Loom Weaving Kit</dt>
+						<dd>
+							<img
+								src="./images/kits/kits-4.webp"
+								alt="A loom with different textured pieces of fabric."
+								loading="lazy"
+								decoding="async"
+								width="512"
+								height="512"
+							/>
+
+							<div>
+								<ul>
+									<li>Frame, potholder, or pin loom</li>
+									<li>Tapestry warp yarn (must use studio’s yarn for frame looms), or</li>
+									<li>Small bag of 40 loops (enough for a potholder)</li>
+									<li>Mini scissors</li>
+									<li>Community yarn bobbins (assorted)</li>
+									<li>Scrap fabric (“cabbage”) for reuse/upcycling weaving</li>
+									<li>
+										<span>Loom waste yarn (from rigid heddle) for making rya knots etc.</span>
+										<ul>
+											<li>This is high quality Ashford or Gist weaving yarn!</li>
+										</ul>
+									</li>
+									<li>Weaving needles, mini shuttle</li>
+									<li>Tapestry comb/beater (or an actual comb!)</li>
+									<li>Mini-pickup stick</li>
+								</ul>
+							</div>
+						</dd>
+					</div>
+					<div>
+						<dt>Drop Spinning</dt>
+						<dd>
+							<img
+								src="./images/kits/kits-5.webp"
+								alt="A wool ball with a brush, a skein of yarn, and a drop spindle. All in warm yellow colours."
+								loading="lazy"
+								decoding="async"
+								width="512"
+								height="512"
+							/>
+
+							<div>
+								<p>
+									* Note: Spinning yarn isn’t one of the textile and fibre arts taught in Winter 2026-2027. A small drop spinning kit is available for those who
+									want to try.
+								</p>
+
+								<ul>
+									<li>High/low, student, and/or Turkish drop spindle</li>
+									<li>Mini “Try-it” bag of fibre per event.</li>
+									<li>Yarn weight gauge</li>
+									<li>Mini hand-carders</li>
+									<li>Learn to drop spin book</li>
+								</ul>
+
+								<p>
+									The <a
+										href="https://www.ashford.co.nz/product/introduction-to-spinning-kit/"
+										target="_blank"
+										rel="noopener noreferrer"
+										referrerpolicy="no-referrer"
+									><em>Ashford “Introduction to Spinning”</em></a> kit can be ordered though the popup shop at member rates (and no HST). That’s the photo
+									on the left.
+								</p>
+							</div>
+						</dd>
+					</div>
+				</dl>
+			</section>
+
+			<section id="book-larger-equipment">
+				<h3>Book Larger Equipment</h3>
+
+				<p><em>(Nominal Materials and/or Reservation Fee)</em></p>
+
+				<dl>
+					<div>
+						<dt>Book an Ashford Rigid Heddle Loom</dt>
+						<dd>
+							<figure>
+								<img
+									src="./images/kits/large-1-1.webp"
+									alt=""
+									loading="lazy"
+									decoding="async"
+									width="512"
+									height="512"
+								/>
+								<img
+									src="./images/kits/large-1-2.webp"
+									alt=""
+									loading="lazy"
+									decoding="async"
+									width="512"
+									height="512"
+								/>
+							</figure>
+							<div>
+								<ul>
+									<li>
+										<span>Materials fee for warp yarn: $10 to $16 ($5 or $6 ODSP)</span>
+										<ul>
+											<li>Ashford “Yoga yarn”, Ashford 8/2 cotton weaving yarn, or Gist Yarns Beam 3/2 organic cotton</li>
+											<li>Materials fee depends on width and length of warp, and dpi of reed used.</li>
+											<li>Full cone option: Member price in the popup shop. We’ll warp from your cone, leaving you the rest to weave with.</li>
+										</ul>
+									</li>
+								</ul>
+
+								<p>
+									<em>
+										Note that for Winter 2026-2027 rigid heddle looms are warped by Liz and/or her PA.
+										<br />Later in 2027 we’ll be offering “Rigid heddle weaving 102 Warp speed ahead”.
+									</em>
+								</p>
+							</div>
+						</dd>
+					</div>
+					<div>
+						<dt>Book an Ashford Inklelette Loom</dt>
+						<dd>
+							<figure>
+								<img
+									src="./images/kits/large-2-1.webp"
+									alt=""
+									loading="lazy"
+									decoding="async"
+									width="512"
+									height="512"
+								/>
+								<img
+									src="./images/kits/large-2-2.webp"
+									alt=""
+									loading="lazy"
+									decoding="async"
+									width="512"
+									height="512"
+								/>
+							</figure>
+							<div>
+								<ul>
+									<li>$2.50 ($1.00 ODSP) + cost of warp yarn</li>
+									<li>Inklette looms are not pre-warped.</li>
+									<li>Inklette looms are “warp facing”.</li>
+									<li>Much of the weave patterning is done during warping.</li>
+									<li>To keep our Inklette looms in good condtion only yarns from the approved list must be used for both warp and weft.</li>
+									<li>Inkle/Inkellet weaving mini-workshop required for use.</li>
+								</ul>
+							</div>
+						</dd>
+					</div>
+					<div>
+						<dt>book an Electric Ball Winder and Swift (30 min)</dt>
+						<dd>
+							<figure>
+								<img
+									src="./images/kits/large-3-1.webp"
+									alt=""
+									loading="lazy"
+									decoding="async"
+									width="512"
+									height="512"
+								/>
+								<img
+									src="./images/kits/large-3-2.webp"
+									alt=""
+									loading="lazy"
+									decoding="async"
+									width="512"
+									height="512"
+								/>
+							</figure>
+							<div>
+								<ul>
+									<li>$1.00</li>
+									<li>Free for ODSP and those with reduced hand function</li>
+									<li>Orientation required.</li>
+								</ul>
+								<p>
+									<em>
+										Note: Use of the shared manual ball winder and swift, and a nostipine or swift are included with your Community Open Studio ticket.
+										<br />If you have multiple skeins of yarn to wind into balls 30 minutes with an electric ball winder can save you hours (and your wrist).
+									</em>
+								</p>
+							</div>
+						</dd>
+					</div>
+				</dl>
+			</section>
 
 			<hr />
 
 			<section id="what-are-community-points">
 				<h2>What are Community Points?</h2>
 
-				<p>
-					The Community Rewards Points program is a way for members to earn points towards materials and supplies in the popup shop, or materials fees while helping to
-					build our community.
-				</p>
+				<columns-section image-first>
+					<img
+						src="./images/studio/studio-3.webp"
+						alt="A painting of multiple hands overlapping one another."
+						loading="lazy"
+						decoding="async"
+						width="771"
+						height="512"
+					/>
 
-				<h3>Examples include:</h3>
+					<div>
+						<p>
+							The Community Rewards Points program is a way for members to earn points towards materials and supplies in the popup shop, or materials fees while
+							helping to build our community.
+						</p>
 
-				<ul>
-					<li>You volunteers as a greeter at a Community Open Studio</li>
-					<li>You earn 825 Community Points</li>
-					<li>One skein of Briggs and Little Regal is $8.25 (no HST at popup shop.)</li>
-					<li>You can purchase a skein after the event, or save up their points for that special something.</li>
-				</ul>
+						<p>Examples include:</p>
 
-				<!-- <p><strong>To learn more about community points read this post on Curb Cuts Arts’ Substack or <a href="#">download the accessible PDF</a>.</strong></p> -->
+						<ul>
+							<li>You volunteers as a greeter at a Community Open Studio</li>
+							<li>You earn 825 Community Points</li>
+							<li>One skein of Briggs and Little Regal is $8.25 (no HST at popup shop.)</li>
+							<li>You can purchase a skein after the event, or save up their points for that special something.</li>
+						</ul>
+
+						<!--
+							<p><strong>To learn more about community points read this post on Curb Cuts Arts’ Substack or <a href="#">download the accessible PDF</a>.</strong></p>
+						-->
+					</div>
+				</columns-section>
 			</section>
 
 			<section id="about-the-lead-artist">
 				<h2>About the Lead Artist</h2>
 
-				<columns-section>
-					<img
-						src="./images/about/about-1.webp"
-						alt="A photo of green grassy hills overlooking a deep torquise and calm sea, with a few sheep in the hills."
-						loading="lazy"
-						width="769"
-						height="512"
-					/>
-
+				<columns-section image-first>
 					<div>
 						<p>
 							The lead artist, Elizabeth M<sup>c</sup>Cready, moved from Missisauga, Ontario to Wellington, New Zealand when she was 5 years old. Her nana was a
@@ -1015,62 +1369,72 @@
 							some wool from over the fence. At home, she even had a vintage Singer treadle operated sewing machine (operated by a foot rather than electricity).
 						</p>
 					</div>
-				</columns-section>
 
-				<columns-section>
 					<img
-						src="./images/about/about-2.webp"
-						alt="An old sewing machine."
+						src="./images/about/about-1.webp"
+						alt="A photo of green grassy hills overlooking a deep torquise and calm sea, with a few sheep in the hills."
 						loading="lazy"
-						width="512"
-						height="683"
-					/>
-
-					<div>
-						<p>
-							<filler-text length="80"></filler-text>
-						</p>
-						<p>
-							<filler-text length="80"></filler-text>
-						</p>
-					</div>
-				</columns-section>
-
-				<columns-section>
-					<img
-						src="./images/about/about-3.webp"
-						alt="A small hand knitted pouch with a bow made out of yarn on top of it."
-						loading="lazy"
-						width="383"
+						width="769"
 						height="512"
 					/>
-
-					<div>
-						<p>Fun facts!</p>
-						<ul>
-							<li>
-								<filler-text length="6"></filler-text>
-							</li>
-							<li>
-								<filler-text length="6"></filler-text>
-							</li>
-							<li>
-								<filler-text length="6"></filler-text>
-							</li>
-							<li>
-								<filler-text length="6"></filler-text>
-							</li>
-							<li>
-								<filler-text length="6"></filler-text>
-							</li>
-						</ul>
-					</div>
 				</columns-section>
+
+				<!--
+					<columns-section>
+						<div>
+							<p>
+								<filler-text length="80"></filler-text>
+							</p>
+							<p>
+								<filler-text length="80"></filler-text>
+							</p>
+						</div>
+
+						<img
+							src="./images/about/about-2.webp"
+							alt="An old sewing machine."
+							loading="lazy"
+							width="512"
+							height="683"
+						/>
+					</columns-section>
+
+					<columns-section image-first>
+						<div>
+							<p>Fun facts!</p>
+							<ul>
+								<li>
+									<filler-text length="6"></filler-text>
+								</li>
+								<li>
+									<filler-text length="6"></filler-text>
+								</li>
+								<li>
+									<filler-text length="6"></filler-text>
+								</li>
+								<li>
+									<filler-text length="6"></filler-text>
+								</li>
+								<li>
+									<filler-text length="6"></filler-text>
+								</li>
+							</ul>
+						</div>
+
+						<img
+							src="./images/about/about-3.webp"
+							alt="A small hand knitted pouch with a bow made out of yarn on top of it."
+							loading="lazy"
+							width="383"
+							height="512"
+						/>
+					</columns-section>
+				-->
 			</section>
 
 			<section id="gofundme">
 				<hgroup>
-					<h2>GoFundMe</h2>
+					<h2>GoFundMe!</h2>
 
 					<p>You can help make textile and fibre arts more accessible!</p>
 				</hgroup>
@@ -1108,7 +1472,7 @@
 					</figure>
 				</columns-section>
 
-				<columns-section>
+				<columns-section image-first>
 					<div>
 						<p>
 							Like sewing machines, knitting machines make crafting more accessible for people with reduced hand function or limb loss/limb difference.
@@ -1184,7 +1548,6 @@
 				</hgroup>
 
 				<div>
-					<!-- TODO: remove italics -->
 					<address>
 						<p>
 							<strong>Email:</strong>
@@ -1224,13 +1587,12 @@
 					</address>
 
 					<p>
-						<strong>
-							<filler-text length="10"></filler-text>
-						</strong>
+						<strong>We provide a safe and positive space all people, including 2SLGBTQI+</strong>
 					</p>
 				</div>
 
-				<form action="./" method="post">
+				<!--
+					<form action="./" method="post">
 					<input-wrapper>
 						<label for="contact-name">Name</label>
 						<input
@@ -1264,11 +1626,14 @@
 							required
 						></textarea>
 					</input-wrapper>
+				-->
 
-					<!-- TODO: captcha -->
+				<!-- TODO: captcha -->
 
+				<!--
 					<button type="submit">Send</button>
-				</form>
+					</form>
+				-->
 			</section>
 
 			<section id="instagram">
@@ -1295,39 +1660,67 @@
 		</main>
 
 		<footer>
-			<columns-section>
-				<section>
-					<!-- TODO: comment out links that don't exist yet -->
-					<h2>Sitemap</h2>
+			<div>
+				<img
+					src="./images/logo.svg"
+					alt="Curb Cuts Logo. A bright yelow circular background, with simple shaped letters &quot;CCA&quot; on top of a green ramp. Both C&apos;s have a yarn ball in the middle of them."
+					loading="eager"
+					width="100"
+					height="100"
+				/>
 
-					<ul>
-						<li><a href="#">Code of Conduct</a></li>
-						<li><a href="#">FAQs</a></li>
-						<li><a href="#what-are-community-points">About Volunteering and Community Points Program</a></li>
-						<li><a href="#">Midia Inquires</a></li>
-						<li><a href="#">Sponsorships and Donations</a></li>
-						<li><a href="#gofundme">Fundraising</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</section>
+				<h2>
+					<span>Curb</span>
+					<span>Cuts</span>
+					<span>Arts</span>
+				</h2>
+			</div>
+			<nav aria-label="Sitemap">
+				<ul>
+					<!-- <li><a href="#">Code of Conduct</a></li> -->
+					<!-- <li><a href="#">FAQs</a></li> -->
+					<li><a href="#what-are-community-points">About Volunteering and Community Points Program</a></li>
+					<!-- <li><a href="#">Midia Inquires</a></li> -->
+					<!-- <li><a href="#">Sponsorships and Donations</a></li> -->
+					<li><a href="#gofundme">Fundraising</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
 
-				<section>
-					<img
-						src="./images/funded-by-tac.svg"
-						alt="Text reading: Funded by the city of Toronto. Below it the Toronto Arts Council logo."
-						loading="lazy"
-						decoding="async"
-						width="500"
-						height="200"
-					/>
-				</section>
+			<columns-section columns="3">
+				<link-button>
+					<a
+						href="https://curbcutsarts.eventbrite.ca/"
+						target="_blank"
+						rel="noopener noreferrer"
+						referrerpolicy="no-referrer"
+					>Book on Eventbrite!</a>
+				</link-button>
+
+				<img
+					src="./images/funded-by-tac-white.svg"
+					alt="Text reading: Funded by the city of Toronto. Below it the Toronto Arts Council logo."
+					loading="lazy"
+					decoding="async"
+					width="500"
+					height="200"
+				/>
+
+				<link-button>
+					<a
+						href="https://www.gofundme.com/f/curbcutsarts"
+						target="_blank"
+						rel="noopener noreferrer"
+						referrerpolicy="no-referrer"
+					>Support us on GoFundMe</a>
+				</link-button>
 			</columns-section>
 
 			<section>
-				<!-- TODO: accessibility statement here -->
-				<h3>Privacy</h3>
+				<h3>Accessibility Statement</h3>
 				<p>
-					<filler-text length="50"></filler-text>
+					This website meets Web Content Accessibility Guidelines (WCAG) 2.2 AA.
+					<br />If you experience any issues, please contact us on Instagram or via email.
 				</p>
 			</section>
 		</footer>
